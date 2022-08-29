@@ -1,0 +1,1 @@
+$ ghc --make xmonad.hs -i -ilib -fforce-recomp -main-is main -dynamic -v0 -outputdir /home/m4xshen/.xmonad/build-x86_64-linux -o /home/m4xshen/.xmonad/xmonad-x86_64-linux

@@ -1,0 +1,126 @@
+[bar/left]
+background = ${xrdb:background}
+foreground = ${xrdb:foreground}
+font-0 = "Source Code Pro:size=12;2"
+font-1 = "SauceCodePro Nerd Font Mono:size=17;4"
+
+offset-x = 1%
+offset-y = 1.6%
+width = 6%
+height = 30
+radius = 15.0
+
+modules-center = date
+
+[bar/center]
+background = ${xrdb:background}
+foreground = ${xrdb:foreground}
+font-0 = "Source Code Pro:size=12;2"
+font-1 = "SauceCodePro Nerd Font Mono:size=17;4"
+
+offset-x = 47.5%
+offset-y = 1.6%
+width = 5%
+height = 30
+radius = 15.0
+modules-center = time
+
+[bar/right]
+background = ${xrdb:background}
+foreground = ${xrdb:foreground}
+font-0 = "Source Code Pro:size=12;2"
+font-1 = "SauceCodePro Nerd Font Mono:size=17;4"
+font-2 = "SauceCodePro Nerd Font Mono:size=8;2"
+
+offset-x = 85%
+offset-y = 1.6%
+width = 14%
+height = 30
+radius = 15.0
+module-margin = 1
+modules-center = network alsa battery
+
+[module/date]
+type = internal/date
+format = <label>
+format-prefix = ""
+format-prefix-foreground = ${xrdb:color4}
+format-prefix-font = 2
+date = " %b %d"
+label = %date%
+
+[module/time]
+type = internal/date
+format = <label>
+format-prefix = ""
+format-prefix-foreground = ${xrdb:color4}
+format-prefix-font = 2
+time = " %H:%M"
+label = %time%
+
+[module/network]
+type = internal/network
+interface = wlo1
+interface-type = wireless
+interval = 3.0
+udspeed-minwidth = 5
+accumulate-stats = true
+unknown-as-up = true
+speed-unit = ''
+
+format-connected = <ramp-signal> <label-connected>
+label-connected = %essid%
+ramp-signal-0 = 
+ramp-signal-foreground = ${xrdb:color4}
+ramp-signal-font = 2
+
+label-disconnected = 睊
+label-disconnected-foreground = ${xrdb:color4}
+label-disconnected-font = 2
+
+[module/alsa]
+type = internal/alsa
+
+master-soundcard = default
+master-mixer = Master
+
+interval = 5
+
+format-volume = <ramp-volume> <label-volume>
+ramp-volume-0 = 
+ramp-volume-1 = 
+ramp-volume-2 = 
+ramp-volume-3 = 
+ramp-volume-4 = 
+ramp-volume-5 = 
+ramp-volume-6 = 
+ramp-volume-7 = 
+ramp-volume-8 = 
+ramp-volume-9 = 
+ramp-volume-foreground = ${xrdb:color4}
+ramp-volume-font = 2
+
+[module/battery]
+type = internal/battery
+full-at = 99
+battery = BAT0
+poll-interval = 5
+
+format-discharging = <ramp-capacity> <label-discharging>
+ramp-capacity-0 = 
+ramp-capacity-1 = 
+ramp-capacity-2 = 
+ramp-capacity-3 = 
+ramp-capacity-4 = 
+ramp-capacity-5 = 
+ramp-capacity-6 = 
+ramp-capacity-7 = 
+ramp-capacity-8 = 
+ramp-capacity-9 = 
+ramp-capacity-foreground = ${xrdb:color4}
+ramp-capacity-font = 3
+
+format-charging = <animation-charging> <label-charging>
+animation-charging-0 = 
+animation-charging-foreground = ${xrdb:color4}
+animation-charging-font = 3

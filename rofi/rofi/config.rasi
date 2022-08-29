@@ -1,0 +1,7 @@
+configuration{
+    terminal: "urxvt";
+    drun-display-format: "{name}";
+    display-drun: "  ";
+}
+
+@theme "catppuccin-mocha"

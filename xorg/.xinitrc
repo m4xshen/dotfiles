@@ -47,5 +47,8 @@ fcitx5 &
 # hide cursor
 unclutter --timeout 0.5 &
 
+# manage screens
+~/screen.sh
+
 # launch wm
 exec xmonad

@@ -23,10 +23,13 @@ main = xmonad $ def
         , ((0, xF86XK_AudioMute), spawn "amixer set Master toggle")
         
         -- take screenshot
-        , ((0, xK_Print), spawn "import ~/Pictures/`date +%Y-%m-%d_%H:%M:%S`.jpg")
+        , ((0, xK_Print), spawn "import -window root ~/Pictures/$(date '+%Y-%m-%d_%H:%M:%S').png")
         
         -- launch rofi
-        , ((mod4Mask, xK_p), spawn "rofi -show drun") ]
+        , ((mod4Mask, xK_p), spawn "rofi -show drun")
+
+	-- suspend
+        , ((mod4Mask, xK_x), spawn "systemctl suspend") ]
 
 myTerminal    = "urxvt"
 myModMask     = mod4Mask

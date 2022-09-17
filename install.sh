@@ -9,6 +9,7 @@ stow -t ~/.config -S nvim
 stow -t ~/.config -S polybar
 stow -t ~/.config -S picom
 stow -t ~/.config -S rofi
+stow -t ~/.config -S zathura
 stow -t ~ -S xmonad
 stow -t ~ -S xorg
 stow -t ~ -S bash

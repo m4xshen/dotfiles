@@ -10,6 +10,8 @@ main = xmonad $ def
     , modMask = myModMask
     , borderWidth = myBorderWidth
     , manageHook = myManageHook
+		, normalBorderColor = myNormalBorderColor
+		, focusedBorderColor = myFocusedBorderColor
     , layoutHook = spacingWithEdge 10 $ myLayout
     }
     `additionalKeys` [
@@ -23,17 +25,19 @@ main = xmonad $ def
         , ((0, xF86XK_AudioMute), spawn "amixer set Master toggle")
         
         -- take screenshot
-        , ((0, xK_Print), spawn "import -window root ~/Pictures/$(date '+%Y-%m-%d_%H:%M:%S').png")
+        , ((0, xK_Print), spawn "import ~/Pictures/$(date '+%Y-%m-%d_%H:%M:%S').png")
         
         -- launch rofi
         , ((mod4Mask, xK_p), spawn "rofi -show drun")
 
-	-- suspend
-        , ((mod4Mask, xK_x), spawn "systemctl suspend") ]
+        -- lock
+        , ((mod4Mask, xK_x), spawn "slock") ]
 
-myTerminal    = "urxvt"
+myTerminal    = "kitty"
 myModMask     = mod4Mask
-myBorderWidth = 0
+myBorderWidth = 3
+myNormalBorderColor = "#11111B"
+myFocusedBorderColor = "#11111B"
 myLayout      = gaps [(U, 45)] $ Tall 1 (3/100) (1/2) ||| Mirror (Tall 1 (3/100) (1/2)) ||| Full
 myManageHook = composeAll
     [ appName =? "polybar" --> doIgnore]

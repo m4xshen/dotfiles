@@ -1,1 +1,3 @@
+set font "Source Coe Pro 15"
+set zoom-min 130
 include catppuccin-mocha

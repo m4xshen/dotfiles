@@ -1,8 +1,8 @@
 $ ghc --make xmonad.hs -i -ilib -fforce-recomp -main-is main -dynamic -v0 -outputdir /home/m4xshen/.xmonad/build-x86_64-linux -o /home/m4xshen/.xmonad/xmonad-x86_64-linux
 
-xmonad.hs:31:1: warning: [-Wtabs]
-    Tab character found here.
+xmonad.hs:13:1: warning: [-Wtabs]
+    Tab character found here, and in three further locations.
     Please use spaces instead.
    |
-31 |         -- suspend
+13 |                 , normalBorderColor = myNormalBorderColor
    | ^^^^^^^^

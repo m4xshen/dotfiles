@@ -1,0 +1,67 @@
+* {
+  border: none;
+  border-radius: 10px;
+  /*font-family: FiraCode Nerd Font Mono;*/
+  font-family: 'Fira Code';
+  font-size: 16px;
+  font-feature-settings: '"zero", "ss01", "ss02", "ss03", "ss04", "ss05", "cv31"';
+  min-height: 45px;
+}
+
+window#waybar {
+  background: transparent;
+}
+
+#window {
+  border-radius: 26px;
+}
+
+#workspaces, #clock, #network, #battery {
+  background-color: #11111b;
+  color: #cdd6f4;
+  margin-top: 15px;
+	margin-right: 15px;
+  padding-top: 1px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+#workspaces {
+	margin-left: 15px;
+}
+
+#workspaces button {
+  background: #11111b;
+  color: white;
+}
+
+#workspaces button.active {
+  color: #f38ba8;
+}
+
+#mode {
+  background: #64727D;
+  border-bottom: 3px solid white;
+}
+
+#battery.charging {
+  color: white;
+  background-color: #26A65B;
+}
+
+@keyframes blink {
+to {
+  background-color: #ffffff;
+  color: black;
+}
+}
+
+#battery.warning:not(.charging) {
+  background: #f53c3c;
+  color: white;
+  animation-name: blink;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}

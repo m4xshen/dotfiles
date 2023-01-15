@@ -1,0 +1,18 @@
+{
+    "layer": "top",
+    "modules-left": ["wlr/workspaces"],
+    "modules-center": ["clock"],
+    "modules-right": ["network", "battery"],
+    "clock": {
+      "format": " {:%H:%M}"
+    },
+    "network": {
+      "interface": "wlo1",
+      "format": "{ifname}",
+      "format-wifi": "  {essid}",
+    },
+    "battery": {
+      "format": "{icon}  {capacity}%",
+      "format-icons": ["", "", "", "", ""]
+    },
+}

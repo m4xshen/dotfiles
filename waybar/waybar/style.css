@@ -16,7 +16,7 @@ window#waybar {
   border-radius: 26px;
 }
 
-#workspaces, #clock, #network, #battery {
+#workspaces, #clock, #backlight, #network, #battery {
   background-color: #11111b;
   color: #cdd6f4;
   margin-top: 15px;

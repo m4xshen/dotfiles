@@ -1,10 +1,15 @@
 {
-    "layer": "top",
-    "modules-left": ["wlr/workspaces"],
+  "layer": "top",
+    "modules-left": ["wlr/workspaces", "backlight"],
     "modules-center": ["clock"],
     "modules-right": ["network", "battery"],
     "clock": {
       "format": " {:%H:%M}"
+    },
+    "backlight": {
+      "device": "intel_backlight",
+      "format": "{icon} {percent}%",
+      "format-icons": ["", ""]
     },
     "network": {
       "interface": "wlo1",

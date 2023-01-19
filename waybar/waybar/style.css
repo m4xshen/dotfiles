@@ -1,7 +1,5 @@
 * {
   border: none;
-  border-radius: 10px;
-  /*font-family: FiraCode Nerd Font Mono;*/
   font-family: 'Fira Code';
   font-size: 16px;
   font-feature-settings: '"zero", "ss01", "ss02", "ss03", "ss04", "ss05", "cv31"';
@@ -12,13 +10,10 @@ window#waybar {
   background: transparent;
 }
 
-#window {
-  border-radius: 26px;
-}
-
-#workspaces, #clock, #backlight, #network, #battery {
+#custom-arch, #workspaces {
+  border-radius: 10px;
   background-color: #11111b;
-  color: #cdd6f4;
+  color: #cba6f7;
   margin-top: 15px;
 	margin-right: 15px;
   padding-top: 1px;
@@ -26,27 +21,67 @@ window#waybar {
   padding-right: 10px;
 }
 
-#workspaces {
+#clock {
+  border-radius: 0 10px 10px 0;
+  background-color: #11111b;
+  color: #cdd6f4;
+  margin-top: 15px;
+  padding-top: 1px;
+  padding-right: 10px;
+}
+
+#custom-sound, #network, #battery {
+  border-radius: 0 10px 10px 0;
+  background-color: #11111b;
+  color: #cdd6f4;
+  margin-top: 15px;
+	margin-right: 15px;
+  padding-top: 1px;
+  padding-right: 10px;
+}
+
+#custom-sound-icon {
+  background-color: #11111b;
+  color: #cba6f7;
+  margin-top: 15px;
+  padding-top: 1px;
+  padding-right: 3px;
+}
+
+#backlight {
+  background-color: #11111b;
+  color: #cdd6f4;
+  margin-top: 15px;
+  padding-top: 1px;
+  padding-right: 10px;
+}
+
+#custom-clock-icon, #custom-backlight-icon, #custom-network-icon, #custom-battery-icon {
+  border-radius: 10px 0 0 10px;
+  background-color: #11111b;
+  color: #cba6f7;
+  margin-top: 15px;
+  padding-top: 1px;
+  padding-left: 13px;
+  padding-right: 3px;
+}
+
+#custom-arch {
+  font-size: 20px;
 	margin-left: 15px;
 }
 
 #workspaces button {
   background: #11111b;
-  color: white;
+  color: #cdd6f4;
 }
 
 #workspaces button.active {
-  color: #f38ba8;
-}
-
-#mode {
-  background: #64727D;
-  border-bottom: 3px solid white;
+  color: #cba6f7;
 }
 
 #battery.charging {
-  color: white;
-  background-color: #26A65B;
+  color: #cba6f7;
 }
 
 @keyframes blink {

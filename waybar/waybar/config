@@ -1,23 +1,43 @@
 {
   "layer": "top",
-    "modules-left": ["wlr/workspaces", "backlight"],
-    "modules-center": ["clock"],
-    "modules-right": ["network", "battery"],
+    "modules-left": ["custom/arch", "wlr/workspaces"],
+    "modules-center": ["custom/clock-icon", "clock"],
+    "modules-right": ["custom/backlight-icon", "backlight", "custom/sound-icon", "custom/sound", "custom/network-icon", "network", "custom/battery-icon", "battery"],
+    "custom/arch": {
+      "format": "  ",
+      "on-click": "sh $HOME/.config/rofi/bin/powermenu"
+    },
+    "custom/clock-icon": {
+      "format": " "
+    },
     "clock": {
-      "format": " {:%H:%M}"
+      "format": "{:%H:%M}"
+    },
+    "custom/backlight-icon": {
+      "format": " "
     },
     "backlight": {
       "device": "intel_backlight",
-      "format": "{icon} {percent}%",
-      "format-icons": ["", ""]
+      "format": "{percent}% ",
+    },
+    "custom/sound-icon": {
+      "format": " "
+    },
+    "custom/sound": {
+      "exec": "custom-alsa.sh",
+    },
+    "custom/network-icon": {
+      "format": " "
     },
     "network": {
       "interface": "wlo1",
       "format": "{ifname}",
-      "format-wifi": "  {essid}",
+      "format-wifi": "{essid}",
+    },
+    "custom/battery-icon": {
+      "format": " "
     },
     "battery": {
-      "format": "{icon}  {capacity}%",
-      "format-icons": ["", "", "", "", ""]
+      "format": "{capacity}%",
     },
 }

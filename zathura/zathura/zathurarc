@@ -1,3 +1,2 @@
-set font "Source Coe Pro 15"
-set zoom-min 130
+set font "Fira Code 15"
 include catppuccin-mocha

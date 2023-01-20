@@ -1,43 +1,39 @@
 {
   "layer": "top",
     "modules-left": ["custom/arch", "wlr/workspaces"],
-    "modules-center": ["custom/clock-icon", "clock"],
-    "modules-right": ["custom/backlight-icon", "backlight", "custom/sound-icon", "custom/sound", "custom/network-icon", "network", "custom/battery-icon", "battery"],
+    "modules-center": ["clock"],
+    "modules-right": ["backlight", "custom/sound", "network", "battery"],
     "custom/arch": {
       "format": "  ",
       "on-click": "sh $HOME/.config/rofi/bin/powermenu"
     },
-    "custom/clock-icon": {
-      "format": " "
+    "wlr/workspaces": {
+      "format": "{name}",
+      "on-click": "activate",
+      "all-outputs": true
     },
     "clock": {
-      "format": "{:%H:%M}"
-    },
-    "custom/backlight-icon": {
-      "format": " "
+      "format": "<span color='#cba6f7'> </span>{:%H:%M}",
     },
     "backlight": {
       "device": "intel_backlight",
-      "format": "{percent}% ",
-    },
-    "custom/sound-icon": {
-      "format": " "
+      "format": "<span color='#cba6f7'>{icon}</span> {percent}%",
+      "format-icons": ["", "", "", "", "", "", "", "", ""]
     },
     "custom/sound": {
+      "format": "<span color='#cba6f7'> </span>{}",
       "exec": "custom-alsa.sh",
-    },
-    "custom/network-icon": {
-      "format": " "
     },
     "network": {
       "interface": "wlo1",
       "format": "{ifname}",
-      "format-wifi": "{essid}",
-    },
-    "custom/battery-icon": {
-      "format": " "
+      "format-wifi": "<span color='#cba6f7'> </span>{essid}",
+      "format-ethernet": "{ipaddr}/{cidr} ",
+      "format-disconnected": "<span color='#cba6f7'>󰖪 </span>No Network"
     },
     "battery": {
-      "format": "{capacity}%",
+      "format": "<span color='#cba6f7'>{icon}</span> {capacity}%",
+      "format-icons": ["", "", "", "", "", "", "", "", "", ""],
+      "format-charging": "<span color='#cba6f7'></span> {capacity}%"
     },
 }

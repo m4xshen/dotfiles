@@ -74,7 +74,7 @@ case $chosen in
         fi
         ;;
     $lock)
-        swaylock -c 000000
+        swaylock -c 000000 --ring-color cba6f7 --ring-ver-color cba6f7 --key-hl-color 000000 --inside-color cba6f7 --inside-ver-color cba6f7 --inside-clear-color a6e3a1 --ring-clear-color a6e3a1 --ring-wrong-color f38ba8 --inside-wrong-color f38ba8 --bs-hl-color f38ba8 --text-caps-lock-color 000000
         ;;
     $suspend)
 		ans=$(rdialog &)

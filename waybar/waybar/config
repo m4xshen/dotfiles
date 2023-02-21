@@ -2,14 +2,15 @@
   "layer": "top",
     "modules-left": ["custom/arch", "wlr/workspaces"],
     "modules-center": ["clock"],
-    "modules-right": ["backlight", "custom/sound", "network", "battery"],
+    "modules-right": ["backlight", "pulseaudio", "bluetooth", "network", "battery"],
     "custom/arch": {
       "format": "  ",
+      "tooltip": false,
       "on-click": "sh $HOME/.config/rofi/bin/powermenu"
     },
     "wlr/workspaces": {
       "format": "{name}",
-      "on-click": "activate",
+      "tooltip": false,
       "all-outputs": true
     },
     "clock": {
@@ -20,20 +21,35 @@
       "format": "<span color='#cba6f7'>{icon}</span> {percent}%",
       "format-icons": ["", "", "", "", "", "", "", "", ""]
     },
-    "custom/sound": {
-      "format": "<span color='#cba6f7'> </span>{}",
-      "exec": "custom-alsa.sh",
+    "pulseaudio": {
+      "format": "<span color='#cba6f7'>{icon}</span> {volume}%",
+      "format-muted": "",
+      "tooltip": false,
+      "format-icons": {
+        "headphone": "",
+        "default": ["", "", "󰕾", "󰕾", "󰕾", "", "", ""]
+      },
+      "scroll-step": 1,
+    },
+    "bluetooth": {
+      "format": "<span color='#cba6f7'></span> {status}",
+      "format-disabled": "", // an empty format will hide the module
+      "format-connected": "<span color='#cba6f7'></span> {num_connections}",
+      "tooltip-format": "{device_enumerate}",
+      "tooltip-format-enumerate-connected": "{device_alias}   {device_address}"
     },
     "network": {
       "interface": "wlo1",
       "format": "{ifname}",
       "format-wifi": "<span color='#cba6f7'> </span>{essid}",
       "format-ethernet": "{ipaddr}/{cidr} ",
-      "format-disconnected": "<span color='#cba6f7'>󰖪 </span>No Network"
+      "format-disconnected": "<span color='#cba6f7'>󰖪 </span>No Network",
+      "tooltip": false,
     },
     "battery": {
       "format": "<span color='#cba6f7'>{icon}</span> {capacity}%",
       "format-icons": ["", "", "", "", "", "", "", "", "", ""],
-      "format-charging": "<span color='#cba6f7'></span> {capacity}%"
+      "format-charging": "<span color='#cba6f7'></span> {capacity}%",
+      "tooltip": false,
     },
 }

@@ -17,7 +17,7 @@ background-color:               @BG;
 text-color:                     @FG;
 border:                         2px;
 border-color:                   @BDR;
-border-radius:                  10px;
+border-radius:                  5px;
 width:                          500px;
 anchor:                         center;
 x-offset:                       0;

@@ -4,7 +4,6 @@ export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="robbyrussell"
 
 plugins=(
-  git 
   vi-mode 
   web-search
   zsh-autosuggestions
@@ -20,12 +19,11 @@ export PATH
 
 export EDITOR='nvim'
 
-# alias
-alias ls='ls --color=auto'
-alias ll='ls -l'
-alias la='ls -a'
-alias lla='ls -la'
+export QT_QPA_PLATFORM=wayland
 
-alias n='nvim'
+# alias
+alias n='nvim.appimage'
+alias gogogo='kitty +kitten ssh -oHostKeyAlgorithms=+ssh-dss s111_111511004SSW@140.113.120.238 -p 22'
+alias rm='rm -I'
 
 pfetch.sh

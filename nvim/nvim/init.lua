@@ -1,4 +1,4 @@
-require("settings")
-require("mappings")
-require("autocmds")
-require("plugins")
+require("config.settings")
+require("config.mappings")
+require("config.autocmds")
+require("config.lazy")

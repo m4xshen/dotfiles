@@ -1,5 +1,8 @@
 local function map(mode, lhs, rhs, opts)
-   opts.noremap = true;
+   -- set default value if not specify
+   if opts.noremap == nil then opts.noremap = true end
+   if opts.silent == nil then opts.silent = true end
+
    vim.keymap.set(mode, lhs, rhs, opts)
 end
 
@@ -7,18 +10,18 @@ vim.g.mapleader = " "
 map({ "n", "v" }, "<Space>", "", { silent = true })
 
 -- leader movements
-map("n", "<Leader>w", ":write<CR>", { silent = true })
-map("n", "<Leader>s", ":source %<CR>", { silent = true })
-map("n", "<Leader>v", ":cd ~/.config/nvim/<CR>", { silent = true })
-map("n", "<Leader>h", ":bo vert h ", {})
-map("n", "<Leader>t", ":vs<CR>:terminal<CR>i", {})
-map("n", "<Leader>l", ":NvimTreeToggle<CR>", { silent = true })
-map("n", "<Leader>m", ":make<CR>", { silent = true })
+map("n", "<Leader>w", ":write<CR>", {})
+map("n", "<Leader>s", ":source %<CR>", {})
+map("n", "<Leader>v", ":cd ~/.config/nvim/<CR>", {})
+map("n", "<Leader>h", ":botright vertical help ", { silent = false })
+map("n", "<Leader>t", ":vsplit<CR>:terminal<CR>i", {})
+map("n", "<Leader>l", ":NvimTreeToggle<CR>", {})
+map("n", "<Leader>m", ":make<CR>", {})
 
 -- system clipboard
-map({ "n", "v" }, "<Leader>y", '"+y', { silent = true })
-map({ "n" }, "<Leader>Y", '"+y$', { silent = true })
-map("n", "<Leader>p", '"+p', { silent = true })
+map({ "n", "v" }, "<Leader>y", '"+y', {})
+map({ "n" }, "<Leader>Y", '"+y$', {})
+map("n", "<Leader>p", '"+p', {})
 
 -- center the screen after jump
 map("n", "<C-u>", "<C-u>zz", {})
@@ -33,8 +36,8 @@ map("n", "<C-h>", "<C-w>h", {})
 map("n", "<C-l>", "<C-w>l", {})
 
 -- block movements
-map("v", "K", ":m'<-2<CR>gv=gv", { silent = true }) -- up
-map("v", "J", ":m'>+1<CR>gv=gv", { silent = true }) -- down
+map("v", "K", ":m'<-2<CR>gv=gv", {}) -- up
+map("v", "J", ":m'>+1<CR>gv=gv", {}) -- down
 
 -- disable arrow keys
 map({"", "!"}, "<Right>", "", {})

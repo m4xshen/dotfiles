@@ -1,10 +1,23 @@
 -- only highlight when searching
-vim.api.nvim_create_autocmd("CmdlineEnter", { command = "set hlsearch"})
-vim.api.nvim_create_autocmd("CmdlineLeave", { command = "set nohlsearch"})
+vim.api.nvim_create_autocmd("CmdlineEnter", {
+   callback = function ()
+      vim.opt.hlsearch = true
+   end
+})
+vim.api.nvim_create_autocmd("CmdlineLeave", {
+   callback = function ()
+      vim.opt.hlsearch = false
+   end
+})
 
-vim.api.nvim_create_autocmd("BufEnter",
-   { command = "setlocal formatoptions-=cro" }) -- no auto comment
+-- disable auto comment
+vim.api.nvim_create_autocmd("BufEnter", {
+   callback = function ()
+      vim.opt.formatoptions = { c = false, r = false, o = false }
+   end
+})
 
+-- keymap for .cpp file
 vim.api.nvim_create_autocmd("BufEnter", {
    pattern = { "*.cpp" },
    callback = function()
@@ -12,6 +25,7 @@ vim.api.nvim_create_autocmd("BufEnter", {
    end
 })
 
+-- tab format for .lua file
 vim.api.nvim_create_autocmd("BufEnter", {
    pattern = { "*.lua" },
    callback = function()

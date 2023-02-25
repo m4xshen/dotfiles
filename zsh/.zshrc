@@ -23,6 +23,7 @@ export QT_QPA_PLATFORM=wayland
 
 # alias
 alias n='nvim.appimage'
+alias oop='kitty +kitten ssh stu111511004@140.113.236.57 -p 2751'
 alias gogogo='kitty +kitten ssh -oHostKeyAlgorithms=+ssh-dss s111_111511004SSW@140.113.120.238 -p 22'
 alias rm='rm -I'
 

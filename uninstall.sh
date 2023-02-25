@@ -7,6 +7,7 @@
 # stow -t ~/.config -D hypr
 # stow -t ~/.config -D rofi
 # stow -t ~/.config -D kitty
+# stow -t ~/.config -D nvim
 # stow -t ~/.config -D zathura
 # stow -t ~/.config -D fcitx5
 # stow -t ~/.config -D dunst

@@ -8,8 +8,5 @@ return {
          }
       },
    },
-   {
-      "windwp/nvim-ts-autotag",
-      opts = {}
-   }
+   "windwp/nvim-ts-autotag",
 }

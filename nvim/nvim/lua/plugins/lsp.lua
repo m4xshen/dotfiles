@@ -28,6 +28,12 @@ return {
             },
          })
 
+         require("lspconfig").tailwindcss.setup({
+            on_attach = function()
+               require("tailwindcss-colors").buf_attach(0)
+            end
+         })
+
          for _, language in pairs(languages) do
             require("lspconfig")[language].setup({
                on_attach = on_attach,
@@ -44,7 +50,7 @@ return {
       "williamboman/mason-lspconfig.nvim",
       opts = {
          ensure_installed = { "lua_ls", "clangd", "tsserver", "html", "cssls",
-            "pyright", "gopls" }
+            "tailwindcss", "pyright", "gopls" }
       }
    }
 }

@@ -23,12 +23,6 @@ map({ "n", "v" }, "<Leader>y", '"+y', {})
 map({ "n" }, "<Leader>Y", '"+y$', {})
 map("n", "<Leader>p", '"+p', {})
 
--- center the screen after jump
-map("n", "<C-u>", "<C-u>zz", {})
-map("n", "<C-d>", "<C-d>zz", {})
-map("n", "<C-b>", "<C-b>zz", {})
-map("n", "<C-f>", "<C-f>zz", {})
-
 -- move between windows
 map("n", "<C-k>", "<C-w>k", {})
 map("n", "<C-j>", "<C-w>j", {})

@@ -4,15 +4,27 @@ return {
       opts = {
          disabled_filetypes = { "netrw", "NvimTree", "Lazy", "mason", "help",
             "text", "markdown", "tex", "html" },
-         limit_to_window = true,
-      }
+         scope = "window"
+      },
    },
    {
       "norcalli/nvim-colorizer.lua",
-      opts = {}
+      config = function ()
+         require 'colorizer'.setup()
+      end
+   },
+   {
+      "themaxmarchuk/tailwindcss-colors.nvim",
+      config = function ()
+         require("tailwindcss-colors").setup()
+      end
    },
    {
       "lukas-reineke/indent-blankline.nvim",
       opts = {}
    },
 }
+
+-- long line of text
+-- shorter text
+-- long line of text

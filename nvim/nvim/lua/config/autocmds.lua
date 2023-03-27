@@ -40,10 +40,12 @@ vim.api.nvim_create_autocmd("BufEnter", {
 
 -- keymap for .cpp file
 vim.api.nvim_create_autocmd("BufEnter", {
-   pattern = { "*.cpp" },
+   pattern = { "*.cpp", "*.cc" },
    callback = function()
       vim.keymap.set("n", "<Leader>e", ":terminal ./a.out<CR>",
          { silent = true })
+      -- vim.keymap.set("n", "<Leader>e", ":!./sfml-app<CR>",
+      --    { silent = true })
    end
 })
 
@@ -54,5 +56,6 @@ vim.api.nvim_create_autocmd("BufEnter", {
       vim.opt.shiftwidth = 3
       vim.opt.tabstop = 3
       vim.opt.softtabstop = 3
+      -- vim.opt_local.colorcolumn = {70, 80}
    end
 })

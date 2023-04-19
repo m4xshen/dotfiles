@@ -1,5 +1,6 @@
 local opts = { noremap=true, silent=true }
-vim.keymap.set("n", "<space>e", vim.diagnostic.open_float, opts)
+vim.keymap.set("n", "<Leader>e", vim.diagnostic.open_float, opts)
+vim.keymap.set("n", "<Leader>a", vim.lsp.buf.code_action, opts)
 
 local function on_attach()
    vim.keymap.set("n", "K", vim.lsp.buf.hover, { buffer = 0 })

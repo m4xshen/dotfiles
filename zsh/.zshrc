@@ -18,6 +18,7 @@ path+=('/home/m4xshen/.local/bin')
 export PATH
 
 export EDITOR='nvim'
+export OPENAI_API_KEY=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
 
 export QT_QPA_PLATFORM=wayland
 

@@ -23,8 +23,7 @@ return {
       "lukas-reineke/indent-blankline.nvim",
       opts = {}
    },
+   {
+      'wakatime/vim-wakatime'
+   },
 }
-
--- long line of text
--- shorter text
--- long line of text

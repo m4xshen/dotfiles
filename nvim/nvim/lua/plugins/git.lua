@@ -8,6 +8,7 @@ return {
          vim.keymap.set("n", "<Leader>gs", ":Git<CR>", opt)
          vim.keymap.set("n", "<Leader>gl", ":Git log<CR>", opt)
          vim.keymap.set("n", "<Leader>ga", ":Git add .<CR>", opt)
+         vim.keymap.set("n", "<Leader>gc", ":Git commit<CR>", opt)
       end
    }
 }

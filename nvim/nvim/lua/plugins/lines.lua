@@ -25,7 +25,7 @@ return {
                   filetype = "NvimTree",
                   text = " File Explorer",
                   highlight = "Directory",
-                  separator = true
+                  separator = false
                }
             }
          }
@@ -39,6 +39,9 @@ return {
          "SmiteshP/nvim-navic",
          "nvim-tree/nvim-web-devicons",
       },
-      opts = {},
+      opts = {
+         show_dirname = false,
+         show_basename = false
+      },
    }
 }

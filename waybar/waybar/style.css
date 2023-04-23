@@ -28,10 +28,6 @@ window#waybar {
 
 #workspaces button {
   background: #11111b;
-  color: #cdd6f4;
-}
-
-#workspaces button.active {
   color: #cba6f7;
 }
 
@@ -60,21 +56,4 @@ window#waybar {
 
 #clock {
   margin-right: 0;
-}
-
-@keyframes blink {
-  to {
-    background-color: #ffffff;
-    color: black;
-  }
-}
-
-#battery.warning:not(.charging) {
-  background: #f38ba8;
-  color: white;
-  animation-name: blink;
-  animation-duration: 0.5s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
 }

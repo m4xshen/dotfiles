@@ -2,7 +2,7 @@
 
 # stow -t ~/.local/share -D fonts
 # stow -t ~/.local/share -D icons
-# stow -t ~/.local/bin -D pfetch
+# stow -t ~/.local -D bin
 # stow -t ~/.config -D waybar
 # stow -t ~/.config -D hypr
 # stow -t ~/.config -D rofi

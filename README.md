@@ -12,3 +12,17 @@
 - Font: [Fira Code](https://github.com/tonsky/FiraCode)
 - Fetch: [pfetch](https://github.com/dylanaraps/pfetch)
 - PDF Viewer: [zathura](https://github.com/pwmt/zathura)
+
+## Requirement
+
+Install [stow](https://github.com/aspiers/stow)
+
+## Installation
+
+1. Uncomment the config in `install.sh` you want to install
+2. Run `./install.sh`
+
+## Uninstall
+
+1. Uncomment the config in `uninstall.sh` you want to uninstall
+2. Run `./uninstall.sh`

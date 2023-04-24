@@ -9,13 +9,9 @@
       "on-click": "sh $HOME/.config/rofi/bin/powermenu"
     },
     "wlr/workspaces": {
-      "format": "{icon}",
+      "format": "{name}",
       "tooltip": false,
       "all-outputs": true,
-      "format-icons": {
-        "active": "",
-        "default": ""
-      }
     },
     "clock": {
       "format": "<span color='#cba6f7'> </span>{:%H:%M}",

@@ -6,7 +6,7 @@
 - WM: [Hyprland](https://hyprland.org/)
 - Bar: [Waybar](https://github.com/Alexays/Waybar)
 - Launcher/Powermenu: [Rofi](https://github.com/davatorium/rofi)
-- Terminal: [Kitty](https://github.com/davatorium/rofi)
+- Terminal: [Kitty](https://sw.kovidgoyal.net/kitty/)
 - Shell: [Zsh](https://www.zsh.org/)
 - Editor: [Neovim](https://neovim.io/)
 - Font: [Fira Code](https://github.com/tonsky/FiraCode)

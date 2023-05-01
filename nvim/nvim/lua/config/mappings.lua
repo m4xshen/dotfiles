@@ -7,6 +7,7 @@ local function map(mode, lhs, rhs, opts)
 end
 
 vim.g.mapleader = " "
+vim.g.maplocalleader = " "
 map({ "n", "v" }, "<Space>", "", { silent = true })
 
 -- leader movements
@@ -14,8 +15,7 @@ map("n", "<Leader>w", ":write<CR>", {})
 map("n", "<Leader>s", ":source %<CR>", {})
 map("n", "<Leader>v", ":cd ~/.config/nvim/<CR>", {})
 map("n", "<Leader>h", ":botright vertical help ", { silent = false })
-map("n", "<Leader>t", ":vsplit<CR>:terminal<CR>i", {})
-map("n", "<Leader>l", ":NvimTreeToggle<CR>", {})
+map("n", "<Leader>t", ":NvimTreeToggle<CR>", {})
 map("n", "<Leader>m", ":make<CR>", {})
 
 -- system clipboard
@@ -32,9 +32,3 @@ map("n", "<C-l>", "<C-w>l", {})
 -- block movements
 map("v", "K", ":m'<-2<CR>gv=gv", {}) -- up
 map("v", "J", ":m'>+1<CR>gv=gv", {}) -- down
-
--- disable arrow keys
-map({"", "!"}, "<Right>", "", {})
-map({"", "!"}, "<Left>", "", {})
-map({"", "!"}, "<Up>", "", {})
-map({"", "!"}, "<Down>", "", {})

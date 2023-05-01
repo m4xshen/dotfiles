@@ -13,7 +13,7 @@ local function on_attach()
    vim.keymap.set("n", "gs", "<cmd>lua vim.lsp.buf.signature_help()<cr>", { buffer = 0 })
 end
 
-local languages = { "clangd", "tsserver", "html", "cssls", "pyright", "gopls" }
+local languages = { "clangd", "tsserver", "html", "cssls", "pyright", "gopls", "texlab" }
 
 return {
    {

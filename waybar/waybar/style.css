@@ -13,7 +13,7 @@ window#waybar {
 #custom-arch, #workspaces {
   border-radius: 10px;
   background-color: #11111b;
-  color: #cba6f7;
+  color: #b4befe;
   margin-top: 15px;
 	margin-right: 15px;
   padding-top: 1px;
@@ -24,15 +24,12 @@ window#waybar {
 #custom-arch {
   font-size: 20px;
 	margin-left: 15px;
+  color: #b4befe;
 }
 
 #workspaces button {
   background: #11111b;
-  color: #cdd6f4;
-}
-
-#workspaces button.active {
-  color: #cba6f7;
+  color: #b4befe;
 }
 
 #clock, #backlight, #pulseaudio, #bluetooth, #network, #battery{

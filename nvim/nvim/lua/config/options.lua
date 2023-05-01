@@ -30,8 +30,8 @@ vim.opt.timeoutlen = 300
 -- disable cursor-styling
 vim.opt.guicursor = ""
 
-vim.opt.mouse = ""
+-- vim.opt.mouse = ""
 
 vim.opt.termguicolors = true
 
-vim.opt.cmdheight = 0
+-- vim.opt.cmdheight = 0

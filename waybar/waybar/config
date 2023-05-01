@@ -10,19 +10,24 @@
     },
     "wlr/workspaces": {
       "format": "{name}",
+      "format": "{icon}",
       "tooltip": false,
       "all-outputs": true,
+      "format-icons": {
+        "active": "",
+        "default": ""
+      }
     },
     "clock": {
-      "format": "<span color='#cba6f7'> </span>{:%H:%M}",
+      "format": "<span color='#b4befe'> </span>{:%H:%M}",
     },
     "backlight": {
       "device": "intel_backlight",
-      "format": "<span color='#cba6f7'>{icon}</span> {percent}%",
+      "format": "<span color='#b4befe'>{icon}</span> {percent}%",
       "format-icons": ["", "", "", "", "", "", "", "", ""]
     },
     "pulseaudio": {
-      "format": "<span color='#cba6f7'>{icon}</span> {volume}%",
+      "format": "<span color='#b4befe'>{icon}</span> {volume}%",
       "format-muted": "",
       "tooltip": false,
       "format-icons": {
@@ -32,24 +37,24 @@
       "scroll-step": 1,
     },
     "bluetooth": {
-      "format": "<span color='#cba6f7'></span> {status}",
+      "format": "<span color='#b4befe'></span> {status}",
       "format-disabled": "", // an empty format will hide the module
-      "format-connected": "<span color='#cba6f7'></span> {num_connections}",
+      "format-connected": "<span color='#b4befe'></span> {num_connections}",
       "tooltip-format": "{device_enumerate}",
       "tooltip-format-enumerate-connected": "{device_alias}   {device_address}"
     },
     "network": {
       "interface": "wlo1",
       "format": "{ifname}",
-      "format-wifi": "<span color='#cba6f7'> </span>{essid}",
+      "format-wifi": "<span color='#b4befe'> </span>{essid}",
       "format-ethernet": "{ipaddr}/{cidr} ",
-      "format-disconnected": "<span color='#cba6f7'>󰖪 </span>No Network",
+      "format-disconnected": "<span color='#b4befe'>󰖪 </span>No Network",
       "tooltip": false,
     },
     "battery": {
-      "format": "<span color='#cba6f7'>{icon}</span> {capacity}%",
+      "format": "<span color='#b4befe'>{icon}</span> {capacity}%",
       "format-icons": ["", "", "", "", "", "", "", "", "", ""],
-      "format-charging": "<span color='#cba6f7'></span> {capacity}%",
+      "format-charging": "<span color='#b4befe'></span> {capacity}%",
       "tooltip": false,
     },
 }

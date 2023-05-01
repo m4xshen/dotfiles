@@ -5,10 +5,10 @@ icon_path = "~/.local/share/icons/"
 icon_theme = WhiteSur
 enable_recursive_icon_lookup = true
 
-origin = bottom-right
-offset = 30x30
+origin = top-right
+offset = 15x15
 frame_width = 2
-frame_color = "#cba6f7"
+frame_color = "#b4befe"
 separator_color= frame
 font = "Fira Code 10"
 corner_radius = 7

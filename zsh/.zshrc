@@ -25,8 +25,11 @@ export QT_QPA_PLATFORM=wayland
 # alias
 alias n='nvim.appimage'
 alias auv='kitty +kitten ssh auv@192.168.0.109'
-alias oop='kitty +kitten ssh stu111511004@140.113.236.57 -p 2751'
-alias gogogo='kitty +kitten ssh -oHostKeyAlgorithms=+ssh-dss s111_111511004SSW@140.113.120.238 -p 22'
+# alias oop='kitty +kitten ssh stu111511004@140.113.236.57 -p 2751'
+alias oop='n scp://stu111511004@140.113.236.57:2751/~/'
+# alias gogogo='kitty +kitten ssh -oHostKeyAlgorithms=+ssh-rsa s111_111511004SSW@140.113.120.238 -p 22'
+# alias gogogo='kitty +kitten ssh s111_111511004SSW@140.113.120.238'
+alias gogogo='n scp://s111_111511004SSW@140.113.120.238/~/'
 alias rm='rm -I'
 
-pfetch.sh
+neofetch --source ~/Pictures/wallpaper2.jpg --colors 4 7 7 4 7 7

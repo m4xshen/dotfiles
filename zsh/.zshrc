@@ -24,7 +24,8 @@ export QT_QPA_PLATFORM=wayland
 
 # alias
 alias n='nvim.appimage'
-alias auv='kitty +kitten ssh auv@192.168.0.109'
+# alias auv='ssh auv@192.168.0.112'
+alias auv='n scp://auv@192.168.0.112/~/'
 # alias oop='kitty +kitten ssh stu111511004@140.113.236.57 -p 2751'
 alias oop='n scp://stu111511004@140.113.236.57:2751/~/'
 # alias gogogo='kitty +kitten ssh -oHostKeyAlgorithms=+ssh-rsa s111_111511004SSW@140.113.120.238 -p 22'

@@ -15,7 +15,9 @@ map("n", "<Leader>w", ":write<CR>", {})
 map("n", "<Leader>s", ":source %<CR>", {})
 map("n", "<Leader>v", ":cd ~/.config/nvim/<CR>", {})
 map("n", "<Leader>h", ":botright vertical help ", { silent = false })
-map("n", "<Leader>t", ":NvimTreeToggle<CR>", {})
+-- map("n", "<Leader>t", ":NvimTreeToggle<CR>", {})
+vim.g.netrw_winsize = 20
+map("n", "<Leader>t", ":Vexplore<CR>", {})
 map("n", "<Leader>m", ":make<CR>", {})
 
 -- system clipboard

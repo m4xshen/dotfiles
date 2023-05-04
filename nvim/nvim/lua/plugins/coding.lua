@@ -8,6 +8,10 @@ return {
       },
    },
    {
+      "lukas-reineke/virt-column.nvim",
+      opts = {}
+   },
+   {
       "norcalli/nvim-colorizer.lua",
       config = function ()
          require 'colorizer'.setup()
@@ -29,8 +33,10 @@ return {
    {
       'm4xshen/hardtime.nvim',
       opts = {
-         restricted_keys = { "h", "j", "k", "l", "-", "+", "<UP>", "<DOWN>", "<LEFT>", "<RIGHT>", "<CR>", "<C-M>" },
-         resetting_keys = { "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "d", "D", "p", "P" },
+         restricted_keys = { "h", "j", "k", "l", "-", "+",
+            "<UP>", "<DOWN>", "<LEFT>", "<RIGHT>", "<CR>", "<C-M>" },
+         resetting_keys = { "0", "1", "2", "3", "4", "5", "6", "7", "8", "9",
+            "d", "D", "p", "P" },
       }
    },
    {
@@ -42,4 +48,11 @@ return {
          }
       end
    },
+   {
+      "github/copilot.vim",
+      config = function()
+         vim.cmd('imap <silent><script><expr> <C-CR> copilot#Accept("\\<CR>")')
+         vim.g.copilot_no_tab_map = true
+      end
+   }
 }

@@ -1,6 +1,8 @@
-<h1 align="center">Mauve</h1>
+<h1 align="center">Lavender</h1>
 
-![all](https://user-images.githubusercontent.com/74842863/213454610-bcbd0311-c093-4165-8fd0-5db8ac9d2604.png)
+![1](https://user-images.githubusercontent.com/74842863/236122546-ab9cc9c8-b361-498c-97a4-fb8698a0bae0.png)
+![2](https://user-images.githubusercontent.com/74842863/236122550-0463503f-6b26-4c8f-a03f-c249482c3cb9.png)
+
 
 - OS: [Arch Linux](https://archlinux.org/)
 - WM: [Hyprland](https://hyprland.org/)

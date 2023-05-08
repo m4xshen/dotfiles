@@ -35,8 +35,6 @@ return {
       opts = {
          restricted_keys = { "h", "j", "k", "l", "-", "+",
             "<UP>", "<DOWN>", "<LEFT>", "<RIGHT>", "<CR>", "<C-M>" },
-         resetting_keys = { "0", "1", "2", "3", "4", "5", "6", "7", "8", "9",
-            "d", "D", "p", "P" },
       }
    },
    {
@@ -53,6 +51,7 @@ return {
       config = function()
          vim.cmd('imap <silent><script><expr> <C-CR> copilot#Accept("\\<CR>")')
          vim.g.copilot_no_tab_map = true
+         vim.g.copilot_enabled = false
       end
-   }
+   },
 }

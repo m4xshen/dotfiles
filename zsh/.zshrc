@@ -32,4 +32,4 @@ alias oop='n scp://stu111511004@140.113.236.57:2751/~/'
 alias gogogo='n scp://s111_111511004SSW@140.113.120.238/~/'
 alias rm='rm -I'
 
-neofetch --source ~/Pictures/wallpaper2.jpg --colors 4 7 7 4 7 7
+neofetch --source ~/Pictures/wallpaper.jpg --colors 4 7 7 4 7 7

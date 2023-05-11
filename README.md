@@ -10,7 +10,7 @@
 - Shell: [Zsh](https://www.zsh.org/)
 - Editor: [Neovim](https://neovim.io/)
 - Font: [Fira Code](https://github.com/tonsky/FiraCode)
-- Fetch: [pfetch](https://github.com/dylanaraps/pfetch)
+- Fetch: [neofetch](https://github.com/dylanaraps/neofetch)
 - PDF Viewer: [zathura](https://github.com/pwmt/zathura)
 
 ## Requirement

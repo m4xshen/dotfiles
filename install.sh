@@ -12,4 +12,4 @@
 # stow -t ~/.config -S fcitx5
 # stow -t ~/.config -S dunst
 # stow -t ~ -S zsh
-# stow -t ~/Pictures -S wallpaper
+stow -t ~/Pictures -S wallpaper

@@ -1,6 +1,6 @@
 <h1 align="center">Lavender</h1>
 
-![all](https://user-images.githubusercontent.com/74842863/236991346-fc0d0b5e-12dd-4fb8-b319-5c2fb6a6d9f8.png)
+![lavender](https://github.com/m4xshen/dotfiles/assets/74842863/e13dbe5d-d6df-4a16-85fc-eddc921312ab)
 
 - OS: [Arch Linux](https://archlinux.org/)
 - WM: [Hyprland](https://hyprland.org/)

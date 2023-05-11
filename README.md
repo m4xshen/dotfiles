@@ -12,6 +12,8 @@
 - Font: [Fira Code](https://github.com/tonsky/FiraCode)
 - Fetch: [neofetch](https://github.com/dylanaraps/neofetch)
 - PDF Viewer: [zathura](https://github.com/pwmt/zathura)
+- Notification Daemon: [dunst](https://github.com/dunst-project/dunst)
+- Colorscheme: [catppuccin mocha](https://github.com/catppuccin/catppuccin) with custom background (#11111B)
 
 ## Requirement
 

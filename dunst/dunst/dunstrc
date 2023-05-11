@@ -1,12 +1,13 @@
 [global]
-format = "<b>%a\n%s</b>\n%b"
+format = "<b>%s</b>\n%b"
 
 icon_path = "~/.local/share/icons/"
 icon_theme = WhiteSur
+max_icon_size = 64
 enable_recursive_icon_lookup = true
 
 origin = top-right
-offset = 15x15
+offset = 22x22
 frame_width = 2
 frame_color = "#b4befe"
 separator_color= frame

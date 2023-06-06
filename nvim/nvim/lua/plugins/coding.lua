@@ -38,15 +38,6 @@ return {
       }
    },
    {
-      'chipsenkbeil/distant.nvim',
-      branch = 'v0.2',
-      config = function()
-         require('distant').setup {
-            ['*'] = require('distant.settings').chip_default()
-         }
-      end
-   },
-   {
       "github/copilot.vim",
       config = function()
          vim.cmd('imap <silent><script><expr> <C-CR> copilot#Accept("\\<CR>")')
@@ -54,4 +45,35 @@ return {
          vim.g.copilot_enabled = false
       end
    },
+   {
+      'mhartington/formatter.nvim',
+      config = function()
+         local util = require "formatter.util"
+
+         require("formatter").setup {
+            filetype = {
+               lua = {
+                  require("formatter.filetypes.lua").stylua,
+
+                  function()
+                     return {
+                        exe = "stylua",
+                        args = {
+                           "--stdin-filepath",
+                           util.escape_path(util.get_current_buffer_file_path()),
+                           "--indent-type",
+                           "Spaces"
+                        },
+                        stdin = true,
+                     }
+                  end
+               },
+
+               ["*"] = {
+                  require("formatter.filetypes.any").remove_trailing_whitespace
+               }
+            }
+         }
+      end
+   }
 }

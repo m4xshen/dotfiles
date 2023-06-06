@@ -66,11 +66,20 @@ vim.api.nvim_create_autocmd("BufEnter", {
    end
 })
 
--- keymap for .cpp file
+-- keymap for .go file
 vim.api.nvim_create_autocmd("BufEnter", {
    pattern = { "*.go" },
    callback = function()
       vim.keymap.set("n", "<Leader>e", ":terminal go run %<CR>",
+         { silent = true })
+   end
+})
+
+-- keymap for .py file
+vim.api.nvim_create_autocmd("BufEnter", {
+   pattern = { "*.py" },
+   callback = function()
+      vim.keymap.set("n", "<Leader>e", ":terminal python3 %<CR>",
          { silent = true })
    end
 })

@@ -15,6 +15,7 @@ PROMPT='%F{magenta}%n%f=>%F{blue}%~%f | '
 
 path+=('/home/m4xshen/nvim-linux64/bin')
 path+=('/home/m4xshen/.local/bin')
+path+=('/home/m4xshen/.local/share/gem/ruby/3.0.0/bin')
 export PATH
 
 export EDITOR='nvim'
@@ -27,8 +28,6 @@ alias n='nvim.appimage'
 alias auv='n scp://auv@192.168.0.112/~/'
 # alias oop='kitty +kitten ssh stu111511004@140.113.236.57 -p 2751'
 alias oop='n scp://stu111511004@140.113.236.57:2751/~/'
-# alias gogogo='kitty +kitten ssh -oHostKeyAlgorithms=+ssh-rsa s111_111511004SSW@140.113.120.238 -p 22'
-# alias gogogo='kitty +kitten ssh s111_111511004SSW@140.113.120.238'
 alias gogogo='n scp://s111_111511004SSW@140.113.120.238/~/'
 alias rm='rm -I'
 

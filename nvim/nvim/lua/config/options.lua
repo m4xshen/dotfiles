@@ -34,4 +34,4 @@ vim.opt.guicursor = ""
 
 vim.opt.termguicolors = true
 
--- vim.opt.cmdheight = 0
+-- vim.opt.cmdheight = 1

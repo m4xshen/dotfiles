@@ -1,15 +1,9 @@
 return {
    {
-      "catppuccin/nvim",
+      "m4xshen/catppuccinight.nvim",
       name = "catppuccin",
       opts = {
          flavour = "mocha",
-         color_overrides = {
-            mocha = {
-               base = "#11111B",
-               mantle = "#11111B",
-            }
-         },
          custom_highlights = function(colors)
             return {
                VertSplit = { fg = colors.surface0 },

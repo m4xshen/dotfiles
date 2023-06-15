@@ -45,35 +45,4 @@ return {
          vim.g.copilot_enabled = false
       end
    },
-   {
-      'mhartington/formatter.nvim',
-      config = function()
-         local util = require "formatter.util"
-
-         require("formatter").setup {
-            filetype = {
-               lua = {
-                  require("formatter.filetypes.lua").stylua,
-
-                  function()
-                     return {
-                        exe = "stylua",
-                        args = {
-                           "--stdin-filepath",
-                           util.escape_path(util.get_current_buffer_file_path()),
-                           "--indent-type",
-                           "Spaces"
-                        },
-                        stdin = true,
-                     }
-                  end
-               },
-
-               ["*"] = {
-                  require("formatter.filetypes.any").remove_trailing_whitespace
-               }
-            }
-         }
-      end
-   }
 }

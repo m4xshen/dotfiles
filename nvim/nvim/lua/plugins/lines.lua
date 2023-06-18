@@ -43,5 +43,15 @@ return {
          show_dirname = false,
          show_basename = false
       },
+   },
+   {
+      'lewis6991/satellite.nvim',
+      opts = {
+         handlers = {
+            gitsigns = {
+               enable = false
+            }
+         }
+      }
    }
 }

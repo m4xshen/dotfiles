@@ -1,5 +1,13 @@
 return {
    {
+      "m4xshen/smartcolumn.nvim",
+      opts = {
+         disabled_filetypes = { "netrw", "NvimTree", "Lazy", "mason", "help",
+            "text", "markdown", "tex", "html" },
+         scope = "window"
+      },
+   },
+   {
       "nvim-lualine/lualine.nvim",
       dependencies = { "nvim-tree/nvim-web-devicons" },
       opts = {
@@ -44,14 +52,4 @@ return {
          show_basename = false
       },
    },
-   {
-      'lewis6991/satellite.nvim',
-      opts = {
-         handlers = {
-            gitsigns = {
-               enable = false
-            }
-         }
-      }
-   }
 }

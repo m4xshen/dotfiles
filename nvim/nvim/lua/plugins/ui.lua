@@ -14,4 +14,11 @@ return {
          vim.cmd.colorscheme "catppuccin"
       end
    },
+   {
+      'rcarriga/nvim-notify',
+      opts = {},
+      config = function()
+         vim.notify = require("notify")
+      end
+   },
 }

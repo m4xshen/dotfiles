@@ -1,6 +1,6 @@
 return {
    {
-      "lukas-reineke/virt-column.nvim",
+      "numToStr/Comment.nvim",
       opts = {}
    },
    {
@@ -25,7 +25,16 @@ return {
    {
       'm4xshen/hardtime.nvim',
       event = "VeryLazy",
-      opts = {},
+      opts = {
+         notification = false,
+         disabled_keys = {
+            ["<UP>"] = { "", "i" },
+            ["<DOWN>"] = { "", "i" },
+            ["<LEFT>"] = { "", "i" },
+            ["<RIGHT>"] = { "", "i" },
+            ["<Space>"] = { "n", "v" },
+         },
+      },
    },
    {
       "github/copilot.vim",

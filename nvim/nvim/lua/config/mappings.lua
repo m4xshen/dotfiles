@@ -8,11 +8,14 @@ end
 
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
-map({ "n", "v" }, "<Space>", "", { silent = true })
 
 -- better up/down
 map("n", "k", "v:count == 0 ? 'gk' : 'k'", { expr = true })
 map("n", "j", "v:count == 0 ? 'gj' : 'j'", { expr = true })
+
+--       ZZ      :x
+--       ZQ      :q!
+map("n", "ZQA", ":qa!<CR>", {})
 
 -- leader movements
 map("n", "<Leader>w", ":write<CR>", {})

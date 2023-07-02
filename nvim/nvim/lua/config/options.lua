@@ -2,8 +2,7 @@ vim.opt.number = true
 vim.opt.relativenumber = true
 vim.opt.scrolloff = 10
 
--- use global status line
-vim.opt.laststatus = 3
+vim.opt.splitkeep = "screen"
 
 vim.opt.ignorecase = true
 vim.opt.smartcase = true

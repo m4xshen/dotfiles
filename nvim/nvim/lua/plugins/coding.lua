@@ -1,5 +1,43 @@
 return {
    {
+      'stevearc/oil.nvim',
+      dependencies = { "nvim-tree/nvim-web-devicons" },
+      opts = {
+         columns = {
+            "icon",
+            "permissions",
+            "size",
+            "mtime",
+         },
+         keymaps = {
+            ["<C-v>"] = "actions.select_vsplit",
+            ["<C-s>"] = "actions.select_split",
+            ["<Esc>"] = "actions.close",
+         },
+         view_options = {
+            show_hidden = true
+         },
+         float = {
+            padding = 5,
+         }
+      },
+      keys = {
+         { "<Leader>o", ":lua require('oil').open_float()<CR>" }
+      }
+   },
+   {
+      "mhartington/formatter.nvim",
+      config = function()
+         require("formatter").setup({
+            filetype = {
+               lua = {
+                  require("formatter.filetypes.lua").stylua,
+               }
+            }
+         })
+      end
+   },
+   {
       "numToStr/Comment.nvim",
       opts = {}
    },
@@ -20,11 +58,10 @@ return {
       opts = {}
    },
    {
-      'wakatime/vim-wakatime'
+      "wakatime/vim-wakatime"
    },
    {
-      'm4xshen/hardtime.nvim',
-      event = "VeryLazy",
+      "m4xshen/hardtime.nvim",
       opts = {
          notification = false,
          disabled_keys = {
@@ -32,9 +69,16 @@ return {
             ["<DOWN>"] = { "", "i" },
             ["<LEFT>"] = { "", "i" },
             ["<RIGHT>"] = { "", "i" },
-            ["<Space>"] = { "n", "v" },
+            ["<Space>"] = { "n", "x" },
          },
       },
+   },
+   {
+      "fedepujol/move.nvim",
+      config = function()
+         vim.keymap.set("v", "K", ":MoveBlock(-1)<CR>", { noremap = true, silent = true })
+         vim.keymap.set("v", "J", ":MoveBlock(1)<CR>", { noremap = true, silent = true })
+      end
    },
    {
       "github/copilot.vim",

@@ -23,12 +23,14 @@ export EDITOR='nvim'
 export QT_QPA_PLATFORM=wayland
 
 # alias
-alias n='nvim.appimage'
+alias n='nvim'
+alias n-lazy='NVIM_APPNAME=LazyVim nvim.appimage'
 # alias auv='ssh auv@192.168.0.112'
 alias auv='n scp://auv@192.168.0.112/~/'
 # alias oop='kitty +kitten ssh stu111511004@140.113.236.57 -p 2751'
 alias oop='n scp://stu111511004@140.113.236.57:2751/~/'
 alias gogogo='n scp://s111_111511004SSW@140.113.120.238/~/'
 alias rm='rm -I'
+alias hs='hugo server --noHTTPCache'
 
 neofetch --source ~/Pictures/wallpaper.jpg --colors 4 7 7 4 7 7

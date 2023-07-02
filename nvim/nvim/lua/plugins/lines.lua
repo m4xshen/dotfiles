@@ -18,7 +18,7 @@ return {
          options = {
             theme = "catppuccin",
             globalstatus = true,
-         }
+         },
       },
       init = function()
          vim.opt.showmode = false

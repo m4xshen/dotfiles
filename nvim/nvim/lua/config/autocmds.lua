@@ -1,39 +1,42 @@
-vim.api.nvim_create_autocmd({ "BufEnter", "CursorMoved", "CursorMovedI", "WinScrolled" }, {
-   callback = function()
-      vim.cmd("VirtColumnRefresh")
-   end
-})
+vim.api.nvim_create_autocmd(
+   { "BufEnter", "CursorMoved", "CursorMovedI", "WinScrolled" },
+   {
+      callback = function()
+         vim.cmd("VirtColumnRefresh")
+      end,
+   }
+)
 
 -- only highlight when searching
 vim.api.nvim_create_autocmd("CmdlineEnter", {
-   callback = function ()
+   callback = function()
       local cmd = vim.v.event.cmdtype
       if cmd == "/" or cmd == "?" then
          vim.opt.hlsearch = true
       end
-   end
+   end,
 })
 vim.api.nvim_create_autocmd("CmdlineLeave", {
-   callback = function ()
+   callback = function()
       local cmd = vim.v.event.cmdtype
       if cmd == "/" or cmd == "?" then
          vim.opt.hlsearch = false
       end
-   end
+   end,
 })
 
 -- Highlight when yanking
-vim.api.nvim_create_autocmd('TextYankPost', {
+vim.api.nvim_create_autocmd("TextYankPost", {
    callback = function()
       vim.highlight.on_yank({ timeout = 200 })
-   end
+   end,
 })
 
 -- Disable auto comment
 vim.api.nvim_create_autocmd("BufEnter", {
-   callback = function ()
+   callback = function()
       vim.opt.formatoptions = { c = false, r = false, o = false }
-   end
+   end,
 })
 
 -- turn on spell check for markdown and text file
@@ -41,18 +44,22 @@ vim.api.nvim_create_autocmd("BufEnter", {
    pattern = { "*.md" },
    callback = function()
       vim.opt_local.spell = true
-   end
+   end,
 })
 
 -- keymap for .cpp file
 vim.api.nvim_create_autocmd("BufEnter", {
    pattern = { "*.cpp", "*.cc" },
    callback = function()
-      vim.keymap.set("n", "<Leader>e", ":terminal ./a.out<CR>",
-         { silent = true })
+      vim.keymap.set(
+         "n",
+         "<Leader>e",
+         ":terminal ./a.out<CR>",
+         { silent = true }
+      )
       -- vim.keymap.set("n", "<Leader>e", ":!./sfml-app<CR>",
       --    { silent = true })
-   end
+   end,
 })
 
 -- tab format for .lua file
@@ -63,23 +70,31 @@ vim.api.nvim_create_autocmd("BufEnter", {
       vim.opt.tabstop = 3
       vim.opt.softtabstop = 3
       -- vim.opt_local.colorcolumn = {70, 80}
-   end
+   end,
 })
 
 -- keymap for .go file
 vim.api.nvim_create_autocmd("BufEnter", {
    pattern = { "*.go" },
    callback = function()
-      vim.keymap.set("n", "<Leader>e", ":terminal go run %<CR>",
-         { silent = true })
-   end
+      vim.keymap.set(
+         "n",
+         "<Leader>e",
+         ":terminal go run %<CR>",
+         { silent = true }
+      )
+   end,
 })
 
 -- keymap for .py file
 vim.api.nvim_create_autocmd("BufEnter", {
    pattern = { "*.py" },
    callback = function()
-      vim.keymap.set("n", "<Leader>e", ":terminal python3 %<CR>",
-         { silent = true })
-   end
+      vim.keymap.set(
+         "n",
+         "<Leader>e",
+         ":terminal python3 %<CR>",
+         { silent = true }
+      )
+   end,
 })

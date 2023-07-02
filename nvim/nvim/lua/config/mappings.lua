@@ -13,31 +13,26 @@ vim.g.maplocalleader = " "
 map("n", "k", "v:count == 0 ? 'gk' : 'k'", { expr = true })
 map("n", "j", "v:count == 0 ? 'gj' : 'j'", { expr = true })
 
---       ZZ      :x
---       ZQ      :q!
-map("n", "ZQA", ":qa!<CR>", {})
+map("n", "<C-u>", "<C-u>zz", {})
+map("n", "<C-d>", "<C-d>zz", {})
+map("n", "<C-b>", "<C-b>zz", {})
+map("n", "<C-f>", "<C-f>zz", {})
 
 -- leader movements
 map("n", "<Leader>w", ":write<CR>", {})
 map("n", "<Leader>s", ":source %<CR>", {})
-map("n", "<Leader>v", ":cd ~/.config/nvim/<CR>", {})
-map("n", "<Leader>h", ":botright vertical help ", { silent = false })
-map("n", "<Leader>t", ":NvimTreeToggle<CR>", {})
--- vim.g.netrw_winsize = 20
--- map("n", "<Leader>t", ":Vexplore<CR>", {})
+map("n", "<Leader>v", ":cd ~/.config/nvim/<CR>:Telescope find_files<CR>", {})
 map("n", "<Leader>m", ":make<CR>", {})
+map("n", "<Leader>b", ":!busted %<CR>", {})
 
 -- system clipboard
 map({ "n", "v" }, "<Leader>y", '"+y', {})
 map({ "n" }, "<Leader>Y", '"+y$', {})
 map("n", "<Leader>p", '"+p', {})
+map("n", "<Leader>P", '"+P', {})
 
 -- move between windows
 map("n", "<C-k>", "<C-w>k", {})
 map("n", "<C-j>", "<C-w>j", {})
 map("n", "<C-h>", "<C-w>h", {})
 map("n", "<C-l>", "<C-w>l", {})
-
--- block movements
-map("v", "K", ":m'<-2<CR>gv=gv", {}) -- up
-map("v", "J", ":m'>+1<CR>gv=gv", {}) -- down

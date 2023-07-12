@@ -1,15 +1,24 @@
 return {
    {
       "lukas-reineke/virt-column.nvim",
-      opts = {}
+      opts = {},
    },
    {
       "m4xshen/smartcolumn.nvim",
-      -- opts = {
-      --    disabled_filetypes = { "netrw", "NvimTree", "Lazy", "mason", "help",
-      --       "text", "markdown", "tex", "html" },
-      --    scope = "window"
-      -- },
+      opts = {
+         disabled_filetypes = {
+            "netrw",
+            "NvimTree",
+            "Lazy",
+            "mason",
+            "help",
+            "text",
+            "markdown",
+            "tex",
+            "html",
+         },
+         scope = "window",
+      },
    },
    {
       "nvim-lualine/lualine.nvim",
@@ -22,12 +31,12 @@ return {
       },
       init = function()
          vim.opt.showmode = false
-      end
+      end,
    },
    {
-      'akinsho/bufferline.nvim',
+      "akinsho/bufferline.nvim",
       version = "v3.*",
-      dependencies = 'nvim-tree/nvim-web-devicons',
+      dependencies = "nvim-tree/nvim-web-devicons",
       opts = {
          options = {
             separator_style = "slant",
@@ -37,11 +46,11 @@ return {
                   filetype = "NvimTree",
                   text = " File Explorer",
                   highlight = "Directory",
-                  separator = false
-               }
-            }
-         }
-      }
+                  separator = false,
+               },
+            },
+         },
+      },
    },
    {
       "utilyre/barbecue.nvim",
@@ -54,7 +63,7 @@ return {
       },
       opts = {
          show_dirname = false,
-         show_basename = false
+         show_basename = false,
       },
    },
 }

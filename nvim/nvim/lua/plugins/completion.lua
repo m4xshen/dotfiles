@@ -32,51 +32,53 @@ return {
                ["<S-Tab>"] = cmp.mapping.select_prev_item(),
             }),
             sources = cmp.config.sources({
-               { name = 'nvim_lsp' },
-               { name = 'luasnip' },
-               { name = 'nvim_lua' },
-               { name = 'buffer' },
+               { name = "nvim_lsp" },
+               { name = "luasnip" },
+               { name = "nvim_lua" },
+               { name = "buffer" },
             }),
             enabled = function()
                -- disable completion in comments
-               local context = require 'cmp.config.context'
+               local context = require("cmp.config.context")
 
                -- keep command mode completion enabled
-               if vim.api.nvim_get_mode().mode == 'c' then
+               if vim.api.nvim_get_mode().mode == "c" then
                   return true
                else
                   return not context.in_treesitter_capture("comment")
-                  and not context.in_syntax_group("Comment")
+                     and not context.in_syntax_group("Comment")
                end
             end,
             formatting = {
                format = lspkind.cmp_format({
                   mode = "symbol_text",
                   maxwidth = 50,
-                  ellipsis_char = '...',
-                  menu = ({
+                  ellipsis_char = "...",
+                  menu = {
                      buffer = "[Buffer]",
                      nvim_lsp = "[LSP]",
                      nvim_lua = "[Lua]",
                      luasnip = "[LuaSnip]",
                      latex_symbols = "[Latex]",
-                  })
+                  },
                }),
-            }
+            },
          })
 
          cmp.setup.cmdline({ "/", "?" }, {
             mapping = cmp.mapping.preset.cmdline(),
             sources = {
-               { name = "buffer" }
-            }
+               { name = "buffer" },
+            },
          })
 
          cmp.setup.cmdline(":", {
             mapping = cmp.mapping.preset.cmdline(),
-            sources = cmp.config.sources({ { name = "path" } },
-            { { name = "cmdline" } })
+            sources = cmp.config.sources(
+               { { name = "path" } },
+               { { name = "cmdline" } }
+            ),
          })
-      end
+      end,
    },
 }

@@ -1,11 +1,11 @@
 return {
    {
       "lervag/vimtex",
-      config = function ()
+      config = function()
          vim.cmd([[
          filetype plugin indent on
          let g:vimtex_view_method = 'zathura'
          ]])
-      end
+      end,
    },
 }

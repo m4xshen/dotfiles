@@ -1,6 +1,6 @@
 return {
    {
-      'stevearc/oil.nvim',
+      "stevearc/oil.nvim",
       dependencies = { "nvim-tree/nvim-web-devicons" },
       opts = {
          columns = {
@@ -15,52 +15,59 @@ return {
             ["<Esc>"] = "actions.close",
          },
          view_options = {
-            show_hidden = true
+            show_hidden = true,
          },
          float = {
             padding = 5,
-         }
+         },
       },
       keys = {
-         { "<Leader>o", ":lua require('oil').open_float()<CR>" }
-      }
+         { "<Leader>o", ":lua require('oil').open_float()<CR>" },
+      },
    },
    {
       "sbdchd/neoformat",
       config = function()
-         vim.keymap.set("n", "<Leader>fm", ":TailwindSort<CR>:Neoformat<CR>",
-            { silent = true, noremap = true });
+         vim.keymap.set(
+            "n",
+            "<Leader>fm",
+            ":TailwindSort<CR>:Neoformat<CR>",
+            { silent = true, noremap = true }
+         )
          vim.g.neoformat_try_node_exe = 1
-      end
+      end,
    },
    {
-      'laytan/tailwind-sorter.nvim',
-      dependencies = {'nvim-treesitter/nvim-treesitter', 'nvim-lua/plenary.nvim'},
-      build = 'cd formatter && npm i && npm run build',
+      "laytan/tailwind-sorter.nvim",
+      dependencies = {
+         "nvim-treesitter/nvim-treesitter",
+         "nvim-lua/plenary.nvim",
+      },
+      build = "cd formatter && npm i && npm run build",
       config = {},
    },
    {
       "numToStr/Comment.nvim",
-      opts = {}
+      opts = {},
    },
    {
       "norcalli/nvim-colorizer.lua",
-      config = function ()
-         require 'colorizer'.setup()
-      end
+      config = function()
+         require("colorizer").setup()
+      end,
    },
    {
       "themaxmarchuk/tailwindcss-colors.nvim",
-      config = function ()
+      config = function()
          require("tailwindcss-colors").setup()
-      end
+      end,
    },
    {
       "lukas-reineke/indent-blankline.nvim",
-      opts = {}
+      opts = {},
    },
    {
-      "wakatime/vim-wakatime"
+      "wakatime/vim-wakatime",
    },
    {
       "m4xshen/hardtime.nvim",
@@ -78,9 +85,19 @@ return {
    {
       "fedepujol/move.nvim",
       config = function()
-         vim.keymap.set("v", "K", ":MoveBlock(-1)<CR>", { noremap = true, silent = true })
-         vim.keymap.set("v", "J", ":MoveBlock(1)<CR>", { noremap = true, silent = true })
-      end
+         vim.keymap.set(
+            "v",
+            "K",
+            ":MoveBlock(-1)<CR>",
+            { noremap = true, silent = true }
+         )
+         vim.keymap.set(
+            "v",
+            "J",
+            ":MoveBlock(1)<CR>",
+            { noremap = true, silent = true }
+         )
+      end,
    },
    {
       "github/copilot.vim",
@@ -88,6 +105,6 @@ return {
          vim.cmd('imap <silent><script><expr> <C-CR> copilot#Accept("\\<CR>")')
          vim.g.copilot_no_tab_map = true
          vim.g.copilot_enabled = false
-      end
+      end,
    },
 }

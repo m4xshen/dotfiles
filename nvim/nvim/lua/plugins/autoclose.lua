@@ -8,9 +8,14 @@ return {
             pair_spaces = true,
          },
          keys = {
-            ["'"] = { escape = true, close = true, pair = "''", disabled_filetypes = { "markdown" } },
-            ["`"] = { escape = false, close = true, pair = "``" }
-         }
+            ["'"] = {
+               escape = true,
+               close = true,
+               pair = "''",
+               disabled_filetypes = { "markdown" },
+            },
+            ["`"] = { escape = false, close = true, pair = "``" },
+         },
       },
    },
    "windwp/nvim-ts-autotag",

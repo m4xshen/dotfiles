@@ -1,11 +1,4 @@
 return {
-   -- {
-   --    "startup-nvim/startup.nvim",
-   --    dependencies = {"nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim"},
-   --    config = function()
-   --       require("startup").setup({theme = "evil"})
-   --    end
-   -- },
    {
       "m4xshen/catppuccinight.nvim",
       name = "catppuccin",
@@ -18,14 +11,14 @@ return {
          end,
       },
       init = function()
-         vim.cmd.colorscheme "catppuccin"
-      end
+         vim.cmd.colorscheme("catppuccin")
+      end,
    },
    {
-      'rcarriga/nvim-notify',
+      "rcarriga/nvim-notify",
       opts = {},
       config = function()
          vim.notify = require("notify")
-      end
+      end,
    },
 }

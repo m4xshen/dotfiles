@@ -11,7 +11,7 @@ return {
          },
          keymaps = {
             ["<C-v>"] = "actions.select_vsplit",
-            ["<C-s>"] = "actions.select_split",
+            ["<C-x>"] = "actions.select_split",
             ["<Esc>"] = "actions.close",
          },
          view_options = {
@@ -26,16 +26,18 @@ return {
       }
    },
    {
-      "mhartington/formatter.nvim",
+      "sbdchd/neoformat",
       config = function()
-         require("formatter").setup({
-            filetype = {
-               lua = {
-                  require("formatter.filetypes.lua").stylua,
-               }
-            }
-         })
+         vim.keymap.set("n", "<Leader>fm", ":TailwindSort<CR>:Neoformat<CR>",
+            { silent = true, noremap = true });
+         vim.g.neoformat_try_node_exe = 1
       end
+   },
+   {
+      'laytan/tailwind-sorter.nvim',
+      dependencies = {'nvim-treesitter/nvim-treesitter', 'nvim-lua/plenary.nvim'},
+      build = 'cd formatter && npm i && npm run build',
+      config = {},
    },
    {
       "numToStr/Comment.nvim",

@@ -5,11 +5,11 @@ return {
    },
    {
       "m4xshen/smartcolumn.nvim",
-      opts = {
-         disabled_filetypes = { "netrw", "NvimTree", "Lazy", "mason", "help",
-            "text", "markdown", "tex", "html" },
-         scope = "window"
-      },
+      -- opts = {
+      --    disabled_filetypes = { "netrw", "NvimTree", "Lazy", "mason", "help",
+      --       "text", "markdown", "tex", "html" },
+      --    scope = "window"
+      -- },
    },
    {
       "nvim-lualine/lualine.nvim",
@@ -47,6 +47,7 @@ return {
       "utilyre/barbecue.nvim",
       name = "barbecue",
       version = "*",
+      theme = "catppuccin",
       dependencies = {
          "SmiteshP/nvim-navic",
          "nvim-tree/nvim-web-devicons",

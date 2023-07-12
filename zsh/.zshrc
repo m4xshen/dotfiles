@@ -31,6 +31,9 @@ alias auv='n scp://auv@192.168.0.112/~/'
 alias oop='n scp://stu111511004@140.113.236.57:2751/~/'
 alias gogogo='n scp://s111_111511004SSW@140.113.120.238/~/'
 alias rm='rm -I'
-alias hs='hugo server --noHTTPCache'
+alias hs='hugo server --noHTTPCache --disableFastRender'
+
+alias gl='git log --oneline --graph --decorate'
+alias gla='git log --oneline --graph --decorate --all'
 
 neofetch --source ~/Pictures/wallpaper.jpg --colors 4 7 7 4 7 7

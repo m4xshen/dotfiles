@@ -13,7 +13,7 @@ local function on_attach()
    vim.keymap.set("n", "gs", "<cmd>lua vim.lsp.buf.signature_help()<cr>", { buffer = 0 })
 end
 
-local languages = { "clangd", "tsserver", "html", "cssls", "pyright", "gopls", "texlab" }
+local languages = { "clangd", "html", "cssls", "eslint", "pyright", "gopls", "texlab" }
 
 return {
    {
@@ -46,6 +46,8 @@ return {
             })
          end
 
+         vim.keymap.set("n", "<Leader>fa", ":EslintFixAll<CR>", opts)
+
          vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
             vim.lsp.diagnostic.on_publish_diagnostics, {
                virtual_text = false
@@ -60,7 +62,7 @@ return {
    {
       "williamboman/mason-lspconfig.nvim",
       opts = {
-         ensure_installed = { "lua_ls", "clangd", "tsserver", "html", "cssls",
+         ensure_installed = { "lua_ls", "clangd", "html", "cssls", "eslint",
             "tailwindcss", "pyright", "gopls" }
       }
    }

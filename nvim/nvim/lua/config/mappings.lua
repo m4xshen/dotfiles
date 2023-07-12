@@ -35,8 +35,9 @@ map({ "n" }, "<Leader>Y", '"+y$', {})
 map("n", "<Leader>p", '"+p', {})
 map("n", "<Leader>P", '"+P', {})
 
--- move between windows
+-- window movements
 map("n", "<C-k>", "<C-w>k", {})
 map("n", "<C-j>", "<C-w>j", {})
 map("n", "<C-h>", "<C-w>h", {})
 map("n", "<C-l>", "<C-w>l", {})
+map("n", "<C-c>", "<C-w>c", {})

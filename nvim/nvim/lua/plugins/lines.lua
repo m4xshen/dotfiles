@@ -28,6 +28,9 @@ return {
             theme = "catppuccin",
             globalstatus = true,
          },
+         sections = {
+            lualine_c = {},
+         },
       },
       init = function()
          vim.opt.showmode = false

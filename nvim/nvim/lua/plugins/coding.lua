@@ -11,7 +11,7 @@ return {
          },
          keymaps = {
             ["<C-v>"] = "actions.select_vsplit",
-            ["<C-x>"] = "actions.select_split",
+            ["<C-s>"] = "actions.select_split",
             ["<Esc>"] = "actions.close",
          },
          view_options = {
@@ -80,6 +80,7 @@ return {
             ["<RIGHT>"] = { "", "i" },
             ["<Space>"] = { "n", "x" },
          },
+         disabled_filetypes = { "qf", "netrw", "NvimTree", "lazy", "mason", "oil" },
       },
    },
    {

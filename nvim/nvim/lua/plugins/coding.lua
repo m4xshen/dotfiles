@@ -80,7 +80,14 @@ return {
             ["<RIGHT>"] = { "", "i" },
             ["<Space>"] = { "n", "x" },
          },
-         disabled_filetypes = { "qf", "netrw", "NvimTree", "lazy", "mason", "oil" },
+         disabled_filetypes = {
+            "qf",
+            "netrw",
+            "NvimTree",
+            "lazy",
+            "mason",
+            "oil",
+         },
       },
    },
    {

@@ -32,8 +32,9 @@ map("n", "<Leader>b", ":!busted %<CR>", {})
 -- system clipboard
 map({ "n", "v" }, "<Leader>y", '"+y', {})
 map({ "n" }, "<Leader>Y", '"+y$', {})
-map("n", "<Leader>p", '"+p', {})
-map("n", "<Leader>P", '"+P', {})
+
+map({ "n", "v" }, "<Leader>p", '"+p', {})
+map({ "n", "v" }, "<Leader>P", '"+P', {})
 
 -- window movements
 map("n", "<C-k>", "<C-w>k", {})

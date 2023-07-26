@@ -74,10 +74,6 @@ return {
       opts = {
          notification = false,
          disabled_keys = {
-            ["<UP>"] = { "", "i" },
-            ["<DOWN>"] = { "", "i" },
-            ["<LEFT>"] = { "", "i" },
-            ["<RIGHT>"] = { "", "i" },
             ["<Space>"] = { "n", "x" },
          },
          disabled_filetypes = {

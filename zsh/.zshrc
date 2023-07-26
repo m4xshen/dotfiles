@@ -35,5 +35,9 @@ alias hs='hugo server --noHTTPCache --disableFastRender'
 
 alias gl='git log --oneline --graph --decorate'
 alias gla='git log --oneline --graph --decorate --all'
+alias gs='git status'
+alias ga='git add'
+alias gc='git commit'
+alias gb='git branch'
 
 neofetch --source ~/Pictures/wallpaper.jpg --colors 4 7 7 4 7 7

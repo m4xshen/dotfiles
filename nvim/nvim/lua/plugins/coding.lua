@@ -72,7 +72,6 @@ return {
    {
       "m4xshen/hardtime.nvim",
       opts = {
-         notification = false,
          disabled_keys = {
             ["<Space>"] = { "n", "x" },
          },

@@ -15,7 +15,7 @@ return {
                "html",
                "css",
                "comment",
-               "help",
+               "vimdoc",
                "tsx",
             },
             highlight = { enable = true },

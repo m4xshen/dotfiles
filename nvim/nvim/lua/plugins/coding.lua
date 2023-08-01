@@ -70,39 +70,6 @@ return {
       "wakatime/vim-wakatime",
    },
    {
-      "m4xshen/hardtime.nvim",
-      opts = {
-         disabled_keys = {
-            ["<Space>"] = { "n", "x" },
-         },
-         disabled_filetypes = {
-            "qf",
-            "netrw",
-            "NvimTree",
-            "lazy",
-            "mason",
-            "oil",
-         },
-      },
-   },
-   {
-      "fedepujol/move.nvim",
-      config = function()
-         vim.keymap.set(
-            "v",
-            "K",
-            ":MoveBlock(-1)<CR>",
-            { noremap = true, silent = true }
-         )
-         vim.keymap.set(
-            "v",
-            "J",
-            ":MoveBlock(1)<CR>",
-            { noremap = true, silent = true }
-         )
-      end,
-   },
-   {
       "github/copilot.vim",
       config = function()
          vim.cmd('imap <silent><script><expr> <C-CR> copilot#Accept("\\<CR>")')

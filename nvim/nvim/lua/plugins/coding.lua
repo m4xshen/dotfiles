@@ -64,10 +64,6 @@ return {
    },
    {
       "lukas-reineke/indent-blankline.nvim",
-      opts = {},
-   },
-   {
-      "wakatime/vim-wakatime",
    },
    {
       "github/copilot.vim",
@@ -76,5 +72,13 @@ return {
          vim.g.copilot_no_tab_map = true
          vim.g.copilot_enabled = false
       end,
+   },
+   {
+      "folke/zen-mode.nvim",
+      opts = {
+         window = {
+            width = 100,
+         },
+      },
    },
 }

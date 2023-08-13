@@ -28,6 +28,7 @@ map("n", "<Leader>s", ":source %<CR>", {})
 map("n", "<Leader>v", ":cd ~/.config/nvim/<CR>:Telescope find_files<CR>", {})
 map("n", "<Leader>m", ":make<CR>", {})
 map("n", "<Leader>b", ":!busted %<CR>", {})
+map("n", "<Leader>z", ":ZenMode<CR>", {})
 
 -- system clipboard
 map({ "n", "v" }, "<Leader>y", '"+y', {})

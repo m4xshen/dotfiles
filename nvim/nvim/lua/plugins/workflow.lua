@@ -1,6 +1,7 @@
 return {
    {
       "m4xshen/hardtime.nvim",
+      dependencies = { "MunifTanjim/nui.nvim" },
       opts = {
          disabled_keys = {
             ["<Space>"] = { "n", "x" },
@@ -35,9 +36,7 @@ return {
    {
       "ggandor/leap.nvim",
       config = function()
-         vim.keymap.set({'n', 'x', 'o'}, '<Leader>l', '<Plug>(leap-forward-to)')
-         vim.keymap.set({'n', 'x', 'o'}, '<Leader>L', '<Plug>(leap-backward-to)')
-         vim.keymap.set({'n', 'x', 'o'}, '<Leader>gl', '<Plug>(leap-from-window)')
+         require("leap").add_default_mappings()
       end,
    },
 }

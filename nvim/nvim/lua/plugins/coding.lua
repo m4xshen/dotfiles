@@ -31,7 +31,7 @@ return {
          vim.keymap.set(
             "n",
             "<Leader>fm",
-            ":TailwindSort<CR>:Neoformat<CR>",
+            ":Neoformat<CR>",
             { silent = true, noremap = true }
          )
          vim.g.neoformat_try_node_exe = 1

@@ -1,7 +1,7 @@
 return {
    {
       "m4xshen/hardtime.nvim",
-      dependencies = { "MunifTanjim/nui.nvim" },
+      dependencies = { "MunifTanjim/nui.nvim", "nvim-lua/plenary.nvim" },
       opts = {
          disabled_keys = {
             ["<Space>"] = { "n", "x" },
@@ -31,12 +31,6 @@ return {
             ":MoveBlock(1)<CR>",
             { noremap = true, silent = true }
          )
-      end,
-   },
-   {
-      "ggandor/leap.nvim",
-      config = function()
-         require("leap").add_default_mappings()
       end,
    },
 }

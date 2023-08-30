@@ -1,5 +1,5 @@
 return {
-   "tpope/vim-fugitive",
+   -- "tpope/vim-fugitive",
    {
       "lewis6991/gitsigns.nvim",
       opts = {},
@@ -10,5 +10,14 @@ return {
          vim.keymap.set("n", "<Leader>ga", ":Git add .<CR>", opt)
          vim.keymap.set("n", "<Leader>gc", ":Git commit<CR>", opt)
       end,
+   },
+   {
+      "NeogitOrg/neogit",
+      dependencies = {
+         "nvim-lua/plenary.nvim", -- required
+         "nvim-telescope/telescope.nvim", -- optional
+         "sindrets/diffview.nvim", -- optional
+      },
+      config = true,
    },
 }

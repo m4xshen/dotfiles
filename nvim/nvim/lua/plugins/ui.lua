@@ -22,8 +22,13 @@ return {
       end,
    },
    {
-      "folke/trouble.nvim",
-      dependencies = { "nvim-tree/nvim-web-devicons" },
-      opts = {},
-   }
+      "aznhe21/actions-preview.nvim",
+      config = function()
+         vim.keymap.set(
+            { "v", "n" },
+            "<Leader>ca",
+            require("actions-preview").code_actions
+         )
+      end,
+   },
 }

@@ -24,7 +24,8 @@ export QT_QPA_PLATFORM=wayland
 
 # alias
 alias n='nvim'
-alias n-lazy='NVIM_APPNAME=LazyVim nvim.appimage'
+alias n-lazy='NVIM_APPNAME=LazyVim nvim'
+alias n-nvchad='NVIM_APPNAME=NvChad nvim'
 # alias auv='ssh auv@192.168.0.112'
 alias auv='n scp://auv@192.168.0.112/~/'
 # alias oop='kitty +kitten ssh stu111511004@140.113.236.57 -p 2751'

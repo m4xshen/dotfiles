@@ -12,6 +12,10 @@ return {
          "onsails/lspkind.nvim",
       },
       config = function()
+         local ls = require("luasnip")
+         vim.keymap.set({"i", "s"}, "<C-L>", function() ls.jump( 1) end, {silent = true})
+         vim.keymap.set({"i", "s"}, "<C-J>", function() ls.jump(-1) end, {silent = true})
+
          local lspkind = require("lspkind")
          local cmp = require("cmp")
          cmp.setup({

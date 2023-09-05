@@ -18,7 +18,7 @@ return {
             "minifiles",
          },
          hints = {
-            ["[dcyvV][ia]%("] = {
+            ["[dcyvV][ia][%(%)]"] = {
                message = function(keys)
                   return "Use " .. keys:sub(1, 2) .. "b instead of " .. keys
                end,

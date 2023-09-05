@@ -35,6 +35,7 @@ local languages = {
    "html",
    "cssls",
    "tsserver",
+   "emmet_ls",
    "eslint",
    "pyright",
    "gopls",

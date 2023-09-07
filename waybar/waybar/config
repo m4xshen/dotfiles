@@ -1,6 +1,6 @@
 {
   "layer": "top",
-    "modules-left": ["custom/arch", "wlr/workspaces"],
+    "modules-left": ["custom/arch", "hyprland/workspaces"],
     "modules-center": ["clock"],
     "modules-right": ["backlight", "pulseaudio", "bluetooth", "network", "battery"],
     "custom/arch": {
@@ -8,7 +8,7 @@
       "tooltip": false,
       "on-click": "sh $HOME/.config/rofi/bin/powermenu"
     },
-    "wlr/workspaces": {
+    "hyprland/workspaces": {
       "format": "{name}",
       "format": "{icon}",
       "tooltip": false,

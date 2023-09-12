@@ -13,8 +13,12 @@ return {
       },
       config = function()
          local ls = require("luasnip")
-         vim.keymap.set({"i", "s"}, "<C-L>", function() ls.jump( 1) end, {silent = true})
-         vim.keymap.set({"i", "s"}, "<C-J>", function() ls.jump(-1) end, {silent = true})
+         vim.keymap.set({ "i", "s" }, "<C-L>", function()
+            ls.jump(1)
+         end, { silent = true })
+         vim.keymap.set({ "i", "s" }, "<C-J>", function()
+            ls.jump(-1)
+         end, { silent = true })
 
          local lspkind = require("lspkind")
          local cmp = require("cmp")
@@ -65,6 +69,13 @@ return {
                      luasnip = "[LuaSnip]",
                      latex_symbols = "[Latex]",
                   },
+                  before = function(entry, vim_item)
+                     vim_item = require("tailwindcss-colorizer-cmp").formatter(
+                        entry,
+                        vim_item
+                     )
+                     return vim_item
+                  end,
                }),
             },
          })

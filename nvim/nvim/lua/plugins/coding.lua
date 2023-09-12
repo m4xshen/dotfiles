@@ -1,5 +1,8 @@
 return {
    {
+      "tpope/vim-sleuth",
+   },
+   {
       "MaximilianLloyd/tw-values.nvim",
       keys = {
          {
@@ -46,15 +49,9 @@ return {
    },
    {
       "sbdchd/neoformat",
-      config = function()
-         vim.keymap.set(
-            "n",
-            "<Leader>fm",
-            ":Neoformat<CR>",
-            { silent = true, noremap = true }
-         )
-         vim.g.neoformat_try_node_exe = 1
-      end,
+      keys = {
+         { "<Leader>fm", ":Neoformat<CR>" },
+      },
    },
    {
       "laytan/tailwind-sorter.nvim",
@@ -82,11 +79,14 @@ return {
       end,
    },
    {
+      "roobert/tailwindcss-colorizer-cmp.nvim",
+   },
+   {
       "lukas-reineke/indent-blankline.nvim",
       branch = "v3",
       config = function()
          require("ibl").setup()
-      end
+      end,
    },
    {
       "github/copilot.vim",
@@ -99,8 +99,8 @@ return {
    {
       "shortcuts/no-neck-pain.nvim",
       version = "*",
-      config = function()
-         vim.keymap.set("n", "<Leader>n", ":NoNeckPain<CR>")
-      end,
+      keys = {
+         { "<Leader>n", ":NoNeckPain<CR>" },
+      },
    },
 }

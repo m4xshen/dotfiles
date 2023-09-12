@@ -24,4 +24,10 @@ return {
          })
       end,
    },
+   {
+      "nvim-treesitter/nvim-treesitter-context",
+      config = function()
+         vim.cmd("hi TreesitterContextBottom gui=underdashed guisp=#585b70")
+      end
+   },
 }

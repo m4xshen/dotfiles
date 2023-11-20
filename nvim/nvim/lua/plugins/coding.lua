@@ -1,5 +1,14 @@
 return {
    {
+      "sbdchd/neoformat",
+      config = function()
+         vim.g.neoformat_try_node_exe = 1
+      end,
+      keys = {
+         { "<Leader>fm", ":Neoformat<CR>" },
+      },
+   },
+   {
       "tpope/vim-sleuth",
    },
    {
@@ -48,12 +57,6 @@ return {
       },
    },
    {
-      "sbdchd/neoformat",
-      keys = {
-         { "<Leader>fm", ":Neoformat<CR>" },
-      },
-   },
-   {
       "laytan/tailwind-sorter.nvim",
       dependencies = {
          "nvim-treesitter/nvim-treesitter",
@@ -93,7 +96,7 @@ return {
       config = function()
          vim.cmd('imap <silent><script><expr> <C-CR> copilot#Accept("\\<CR>")')
          vim.g.copilot_no_tab_map = true
-         vim.g.copilot_enabled = false
+         -- vim.g.copilot_enabled = true
       end,
    },
    {

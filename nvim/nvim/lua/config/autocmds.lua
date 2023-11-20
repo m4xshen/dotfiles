@@ -1,12 +1,3 @@
-vim.api.nvim_create_autocmd(
-   { "BufEnter", "CursorMoved", "CursorMovedI", "WinScrolled" },
-   {
-      callback = function()
-         vim.cmd("VirtColumnRefresh")
-      end,
-   }
-)
-
 -- only highlight when searching
 vim.api.nvim_create_autocmd("CmdlineEnter", {
    callback = function()

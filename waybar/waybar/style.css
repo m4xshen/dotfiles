@@ -15,7 +15,7 @@ window#waybar {
   background-color: #11111b;
   color: #b4befe;
   margin-top: 15px;
-	margin-right: 15px;
+  margin-right: 15px;
   padding-top: 1px;
   padding-left: 10px;
   padding-right: 10px;
@@ -23,7 +23,7 @@ window#waybar {
 
 #custom-arch {
   font-size: 20px;
-	margin-left: 15px;
+  margin-left: 15px;
   color: #b4befe;
 }
 

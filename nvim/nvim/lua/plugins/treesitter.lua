@@ -12,6 +12,7 @@ return {
                "lua",
                "vim",
                "javascript",
+               "astro",
                "html",
                "css",
                "comment",
@@ -25,9 +26,23 @@ return {
       end,
    },
    {
-      "nvim-treesitter/nvim-treesitter-context",
+      "nvim-treesitter/nvim-treesitter-textobjects",
+      dependencies = { "nvim-treesitter/nvim-treesitter" },
       config = function()
-         vim.cmd("hi TreesitterContextBottom gui=underdashed guisp=#585b70")
-      end
+         require("nvim-treesitter.configs").setup({
+            textobjects = {
+               select = {
+                  enable = true,
+                  lookahead = true,
+                  keymaps = {
+                     ["af"] = "@function.outer",
+                     ["if"] = "@function.inner",
+                     ["ac"] = "@class.outer",
+                     ["ic"] = "@class.inner",
+                  },
+               },
+            },
+         })
+      end,
    },
 }

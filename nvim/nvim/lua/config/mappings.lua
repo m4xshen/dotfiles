@@ -16,10 +16,10 @@ vim.g.maplocalleader = " "
 -- better up/down
 vim.keymap.set({ "n", "x" }, "j", function()
    return vim.v.count > 0 and "j" or "gj"
-end, { noremap = true, expr = true })
+end, { expr = true })
 vim.keymap.set({ "n", "x" }, "k", function()
    return vim.v.count > 0 and "k" or "gk"
-end, { noremap = true, expr = true })
+end, { expr = true })
 
 map("n", "<C-u>", "<C-u>zz", {})
 map("n", "<C-d>", "<C-d>zz", {})
@@ -46,3 +46,17 @@ map("n", "<C-j>", "<C-w>j", {})
 map("n", "<C-h>", "<C-w>h", {})
 map("n", "<C-l>", "<C-w>l", {})
 map("n", "<C-c>", "<C-w>c", {})
+
+-- extended bracket mappings
+map("n", "]{", function()
+   vim.fn.search("{")
+end, {})
+map("n", "[}", function()
+   vim.fn.search("}", "b")
+end, {})
+map("n", "](", function()
+   vim.fn.search("(")
+end, {})
+map("n", "[)", function()
+   vim.fn.search(")", "b")
+end, {})

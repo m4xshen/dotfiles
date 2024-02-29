@@ -89,3 +89,22 @@ vim.api.nvim_create_autocmd("BufEnter", {
       )
    end,
 })
+
+-- keymap for .ino file
+vim.api.nvim_create_autocmd("BufEnter", {
+   pattern = { "*.ino" },
+   callback = function()
+      vim.keymap.set(
+         "n",
+         "<Leader>c",
+         ":terminal arduino-cli compile --fqbn arduino:avr:uno %<CR>",
+         { silent = true }
+      )
+      vim.keymap.set(
+         "n",
+         "<Leader>u",
+         ":terminal arduino-cli upload -p /dev/ttyACM0 --fqbn arduino:avr:uno %<CR>",
+         { silent = true }
+      )
+   end,
+})

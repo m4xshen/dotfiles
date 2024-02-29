@@ -1,5 +1,8 @@
 return {
    {
+      "tpope/vim-speeddating",
+   },
+   {
       "sbdchd/neoformat",
       config = function()
          vim.g.neoformat_try_node_exe = 1
@@ -7,9 +10,6 @@ return {
       keys = {
          { "<Leader>fm", ":Neoformat<CR>" },
       },
-   },
-   {
-      "tpope/vim-sleuth",
    },
    {
       "MaximilianLloyd/tw-values.nvim",
@@ -32,14 +32,8 @@ return {
    },
    {
       "stevearc/oil.nvim",
-      dependencies = { "nvim-tree/nvim-web-devicons" },
       opts = {
-         columns = {
-            "icon",
-            "permissions",
-            "size",
-            "mtime",
-         },
+         columns = { "" },
          keymaps = {
             ["<C-v>"] = "actions.select_vsplit",
             ["<C-s>"] = "actions.select_split",
@@ -57,15 +51,6 @@ return {
       },
    },
    {
-      "laytan/tailwind-sorter.nvim",
-      dependencies = {
-         "nvim-treesitter/nvim-treesitter",
-         "nvim-lua/plenary.nvim",
-      },
-      build = "cd formatter && npm i && npm run build",
-      config = {},
-   },
-   {
       "numToStr/Comment.nvim",
       opts = {},
    },
@@ -73,12 +58,6 @@ return {
       "norcalli/nvim-colorizer.lua",
       config = function()
          require("colorizer").setup()
-      end,
-   },
-   {
-      "themaxmarchuk/tailwindcss-colors.nvim",
-      config = function()
-         require("tailwindcss-colors").setup()
       end,
    },
    {
@@ -96,7 +75,6 @@ return {
       config = function()
          vim.cmd('imap <silent><script><expr> <C-CR> copilot#Accept("\\<CR>")')
          vim.g.copilot_no_tab_map = true
-         -- vim.g.copilot_enabled = true
       end,
    },
    {

@@ -15,13 +15,6 @@ return {
       end,
    },
    {
-      "rcarriga/nvim-notify",
-      opts = {},
-      config = function()
-         vim.notify = require("notify")
-      end,
-   },
-   {
       "aznhe21/actions-preview.nvim",
       config = function()
          vim.keymap.set(

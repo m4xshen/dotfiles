@@ -106,5 +106,11 @@ vim.api.nvim_create_autocmd("BufEnter", {
          ":terminal arduino-cli upload -p /dev/ttyACM0 --fqbn arduino:avr:uno %<CR>",
          { silent = true }
       )
+      vim.keymap.set(
+         "n",
+         "<Leader>m",
+         ":terminal arduino-cli monitor -p /dev/ttyACM0<CR>",
+         { silent = true }
+      )
    end,
 })

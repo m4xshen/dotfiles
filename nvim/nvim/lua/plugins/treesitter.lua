@@ -17,7 +17,7 @@ return {
                "css",
                "comment",
                "vimdoc",
-               "tsx",
+               "typescript",
             },
             highlight = { enable = true },
             indent = { enable = true },

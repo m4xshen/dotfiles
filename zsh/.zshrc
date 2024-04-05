@@ -1,4 +1,5 @@
 # Path to your oh-my-zsh installation.
+fpath=($HOME/completion_zsh $fpath)
 export ZSH="$HOME/.oh-my-zsh"
 
 ZSH_THEME="robbyrussell"
@@ -36,7 +37,9 @@ alias gs='git status'
 alias ga='git add'
 alias gc='git commit'
 alias gb='git branch'
+alias gr='git restore'
 alias yrd='yarn run dev'
+alias yrb='yarn run build'
 alias yrl='yarn run lint'
 
 neofetch --source ~/Pictures/wallpaper.jpg --colors 4 7 7 4 7 7

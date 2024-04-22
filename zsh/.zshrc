@@ -14,7 +14,6 @@ source $ZSH/oh-my-zsh.sh
 
 PROMPT='%F{magenta}%n%f=>%F{blue}%~%f | '
 
-path+=('/home/m4xshen/nvim-linux64/bin')
 path+=('/home/m4xshen/.local/bin')
 path+=('/home/m4xshen/.local/share/gem/ruby/3.0.0/bin')
 export PATH="$(yarn global bin):$PATH"

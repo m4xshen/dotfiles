@@ -14,6 +14,11 @@ return {
          },
       },
    },
+   -- {
+   --    "tris203/precognition.nvim",
+   --    branch = "issue19_e_motion",
+   --    opts = {}
+   -- },
    {
       "fedepujol/move.nvim",
       keys = {

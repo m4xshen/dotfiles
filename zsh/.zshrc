@@ -22,7 +22,7 @@ export QT_QPA_PLATFORM="wayland;xcb"
 export DOCKER_HOST=unix://$XDG_RUNTIME_DIR/docker.sock
 
 # alias
-alias n='nvim'
+alias n='~/nvim-linux64/bin/nvim'
 alias n-lazy='NVIM_APPNAME=LazyVim nvim'
 alias n-nvchad='NVIM_APPNAME=NvChad nvim'
 alias n-auv='n scp://auv/~/'
@@ -65,3 +65,4 @@ unset __conda_setup
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
+# export TERM=xterm

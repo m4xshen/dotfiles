@@ -1,4 +1,5 @@
 return {
+
    {
       "m4xshen/catppuccinight.nvim",
       name = "catppuccin",

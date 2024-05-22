@@ -52,7 +52,14 @@ return {
    },
    {
       "numToStr/Comment.nvim",
-      opts = {},
+      opts = {
+         pre_hook = function()
+            return vim.bo.commentstring
+         end,
+      },
+   },
+   {
+      "JoosepAlviste/nvim-ts-context-commentstring",
    },
    {
       "norcalli/nvim-colorizer.lua",

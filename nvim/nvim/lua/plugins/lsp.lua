@@ -59,11 +59,11 @@ return {
             },
          })
 
-         require("lspconfig").tailwindcss.setup({
-            on_attach = function()
-               require("tailwindcss-colors").buf_attach(0)
-            end,
-         })
+         -- require("lspconfig").tailwindcss.setup({
+         --    on_attach = function()
+         --       require("tailwindcss-colors").buf_attach(0)
+         --    end,
+         -- })
 
          for _, language in pairs(languages) do
             require("lspconfig")[language].setup({
@@ -98,7 +98,7 @@ return {
             "cssls",
             "tsserver",
             "eslint",
-            "tailwindcss",
+            -- "tailwindcss",
             "pyright",
             "gopls",
          },

@@ -7,9 +7,12 @@ return {
          flavour = "mocha",
          custom_highlights = function(colors)
             return {
-               VertSplit = { fg = colors.surface0 },
+               WinSeparator = { fg = colors.surface0 },
             }
          end,
+         integrations = {
+            notify = true,
+         },
       },
       init = function()
          vim.cmd.colorscheme("catppuccin")

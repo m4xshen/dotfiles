@@ -44,6 +44,13 @@ local languages = {
 
 return {
    {
+      "themaxmarchuk/tailwindcss-colors.nvim",
+      module = "tailwindcss-colors",
+      config = function()
+         require("tailwindcss-colors").setup()
+      end,
+   },
+   {
       "neovim/nvim-lspconfig",
       dependencies = { "hrsh7th/cmp-nvim-lsp" },
       config = function()
@@ -59,11 +66,11 @@ return {
             },
          })
 
-         -- require("lspconfig").tailwindcss.setup({
-         --    on_attach = function()
-         --       require("tailwindcss-colors").buf_attach(0)
-         --    end,
-         -- })
+         require("lspconfig").tailwindcss.setup({
+            on_attach = function()
+               require("tailwindcss-colors").buf_attach(0)
+            end,
+         })
 
          for _, language in pairs(languages) do
             require("lspconfig")[language].setup({
@@ -73,7 +80,7 @@ return {
 
          vim.keymap.set(
             "n",
-            "<Leader>fa",
+            "<Leader>e",
             ":EslintFixAll<CR>",
             { noremap = true, silent = true }
          )
@@ -98,7 +105,7 @@ return {
             "cssls",
             "tsserver",
             "eslint",
-            -- "tailwindcss",
+            "tailwindcss",
             "pyright",
             "gopls",
          },

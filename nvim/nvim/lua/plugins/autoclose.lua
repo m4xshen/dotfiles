@@ -1,9 +1,4 @@
 return {
-   -- {
-   --    'windwp/nvim-autopairs',
-   --    event = "InsertEnter",
-   --    config = true
-   -- },
    {
       "m4xshen/autoclose.nvim",
       opts = {
@@ -20,10 +15,11 @@ return {
                disabled_filetypes = { "markdown" },
             },
             ["`"] = { escape = false, close = true, pair = "``" },
+            [">"] = { escape = false, close = false, pair = "><" },
          },
       },
    },
-   "windwp/nvim-ts-autotag",
+   { "windwp/nvim-ts-autotag", opts = {} },
    {
       "kylechui/nvim-surround",
       version = "*",

@@ -1,14 +1,26 @@
 return {
    {
+      "NStefan002/screenkey.nvim",
+      lazy = false,
+      version = "*",
+   },
+   {
       "tpope/vim-speeddating",
    },
    {
-      "sbdchd/neoformat",
-      config = function()
-         vim.g.neoformat_try_node_exe = 1
-      end,
-      keys = {
-         { "<Leader>fm", ":Neoformat<CR>" },
+      "stevearc/conform.nvim",
+      opts = {
+         formatters_by_ft = {
+            lua = { "stylua" },
+            python = { "black" },
+            javascript = { "prettier" },
+            javascriptreact = { "prettier" },
+            typescript = { "prettier" },
+            typescriptreact = { "prettier" },
+         },
+         format_after_save = {
+            lsp_format = "fallback",
+         },
       },
    },
    {
@@ -69,13 +81,6 @@ return {
    },
    {
       "roobert/tailwindcss-colorizer-cmp.nvim",
-   },
-   {
-      "lukas-reineke/indent-blankline.nvim",
-      branch = "v3",
-      config = function()
-         require("ibl").setup()
-      end,
    },
    {
       "github/copilot.vim",

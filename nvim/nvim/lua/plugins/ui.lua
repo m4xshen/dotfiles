@@ -7,7 +7,9 @@ return {
          flavour = "mocha",
          custom_highlights = function(colors)
             return {
-               WinSeparator = { fg = colors.surface0 },
+               WinSeparator = {
+                  fg = colors.surface0,
+               },
             }
          end,
          color_overrides = {
@@ -39,5 +41,9 @@ return {
       config = function()
          vim.notify = require("notify")
       end,
+   },
+   {
+      "levouh/tint.nvim",
+      opts = {},
    },
 }

@@ -5,9 +5,6 @@ return {
       version = "*",
    },
    {
-      "tpope/vim-speeddating",
-   },
-   {
       "stevearc/conform.nvim",
       opts = {
          formatters_by_ft = {

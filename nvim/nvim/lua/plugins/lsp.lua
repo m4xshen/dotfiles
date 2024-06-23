@@ -1,6 +1,9 @@
 vim.keymap.set("n", "<Leader>d", vim.diagnostic.open_float)
 vim.keymap.set("n", "[d", vim.diagnostic.goto_prev)
 vim.keymap.set("n", "]d", vim.diagnostic.goto_next)
+vim.diagnostic.config({
+   float = { border = "rounded" },
+})
 
 vim.api.nvim_create_autocmd("LspAttach", {
    group = vim.api.nvim_create_augroup("UserLspConfig", {}),
@@ -58,13 +61,6 @@ return {
             },
          })
 
-         local symbols =
-            { Error = "", Warn = "", Info = "", Hint = "" }
-         for name, icon in pairs(symbols) do
-            local hl = "DiagnosticSign" .. name
-            vim.fn.sign_define(hl, { text = icon, numhl = hl, texthl = hl })
-         end
-
          require("lspconfig").tailwindcss.setup({
             on_attach = function()
                require("tailwindcss-colors").buf_attach(0)
@@ -88,6 +84,23 @@ return {
             vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
                virtual_text = false,
             })
+
+         local symbols =
+            { Error = "", Warn = "", Info = "", Hint = "" }
+         for name, icon in pairs(symbols) do
+            local hl = "DiagnosticSign" .. name
+            vim.fn.sign_define(hl, { text = icon, numhl = hl, texthl = hl })
+         end
+
+         local hl_groups = {
+            "DiagnosticUnderlineError",
+            "DiagnosticUnderlineWarn",
+            "DiagnosticUnderlineInfo",
+            "DiagnosticUnderlineHint",
+         }
+         for _, hl in ipairs(hl_groups) do
+            vim.cmd.highlight(hl .. " gui=undercurl")
+         end
       end,
    },
    {

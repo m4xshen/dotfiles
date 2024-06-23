@@ -1,3 +1,11 @@
+vim.api.nvim_create_autocmd("ColorScheme", {
+   pattern = "*",
+   callback = function()
+      vim.api.nvim_set_hl(0, "FloatBorder", { fg = "#b4befe" })
+      vim.api.nvim_set_hl(0, "TelescopeBorder", { fg = "#b4befe" })
+   end,
+})
+
 -- only highlight when searching
 vim.api.nvim_create_autocmd("CmdlineEnter", {
    callback = function()

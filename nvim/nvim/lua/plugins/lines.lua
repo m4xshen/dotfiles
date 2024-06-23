@@ -67,14 +67,17 @@ return {
                   colored = false,
                   icon_only = true,
                   padding = { left = 1, right = 0 },
-                  separator = "",
+                  separator = "∙",
                },
                {
                   "filename",
                   file_status = true,
                   newfile_status = false,
                   path = 1,
-                  padding = { left = 0, right = 1 },
+                  padding = 1,
+                  symbols = {
+                     modified = "●",
+                  },
                   color = { fg = "#cdd6f4" },
                },
             },
@@ -153,8 +156,6 @@ return {
    {
       "lukas-reineke/indent-blankline.nvim",
       main = "ibl",
-      opts = {
-         scope = { enabled = false },
-      },
+      opts = {},
    },
 }

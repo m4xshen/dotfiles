@@ -8,7 +8,7 @@ return {
          custom_highlights = function(colors)
             return {
                WinSeparator = {
-                  fg = colors.surface0,
+                  fg = colors.lavender,
                },
             }
          end,
@@ -32,16 +32,16 @@ return {
          vim.notify = require("notify")
       end,
    },
-   {
-      "levouh/tint.nvim",
-      opts = {
-         window_ignore_function = function(winid)
-            local floating = vim.api.nvim_win_get_config(winid).relative ~= ""
-            return floating
-         end,
-         highlight_ignore_patterns = { "WinSeparator", "Status.*" },
-      },
-   },
+   -- {
+   --    "levouh/tint.nvim",
+   --    opts = {
+   --       window_ignore_function = function(winid)
+   --          local floating = vim.api.nvim_win_get_config(winid).relative ~= ""
+   --          return floating
+   --       end,
+   --       highlight_ignore_patterns = { "WinSeparator", "Status.*" },
+   --    },
+   -- },
    {
       "mrjones2014/smart-splits.nvim",
       config = function()

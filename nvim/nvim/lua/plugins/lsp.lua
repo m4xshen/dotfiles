@@ -58,6 +58,13 @@ return {
             },
          })
 
+         local symbols =
+            { Error = "", Warn = "", Info = "", Hint = "" }
+         for name, icon in pairs(symbols) do
+            local hl = "DiagnosticSign" .. name
+            vim.fn.sign_define(hl, { text = icon, numhl = hl, texthl = hl })
+         end
+
          require("lspconfig").tailwindcss.setup({
             on_attach = function()
                require("tailwindcss-colors").buf_attach(0)

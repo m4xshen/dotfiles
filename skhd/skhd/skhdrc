@@ -1,0 +1,33 @@
+# focus window
+cmd - h : yabai -m window --focus west
+cmd - k : yabai -m window --focus north
+cmd - j : yabai -m window --focus south
+cmd - l : yabai -m window --focus east
+
+# focus desktop
+cmd - 1 : yabai -m space --focus 1
+cmd - 2 : yabai -m space --focus 2
+cmd - 3 : yabai -m space --focus 3
+cmd - 4 : yabai -m space --focus 4
+cmd - 5 : yabai -m space --focus 5
+cmd - 6 : yabai -m space --focus 6
+cmd - 7 : yabai -m space --focus 7
+cmd - 8 : yabai -m space --focus 8
+cmd - 9 : yabai -m space --focus 9
+
+# send window to desktop and follow focus
+shift + cmd - 1 : yabai -m window --space  1; yabai -m space --focus 1
+shift + cmd - 2 : yabai -m window --space  2; yabai -m space --focus 2
+shift + cmd - 3 : yabai -m window --space  3; yabai -m space --focus 3
+shift + cmd - 4 : yabai -m window --space  4; yabai -m space --focus 4
+shift + cmd - 5 : yabai -m window --space  5; yabai -m space --focus 5
+shift + cmd - 6 : yabai -m window --space  6; yabai -m space --focus 6
+shift + cmd - 7 : yabai -m window --space  7; yabai -m space --focus 7
+shift + cmd - 8 : yabai -m window --space  8; yabai -m space --focus 8
+shift + cmd - 9 : yabai -m window --space  9; yabai -m space --focus 9
+
+# float / unfloat window and center on screen
+cmd - v : yabai -m window --toggle float --grid 4:4:1:1:2:2
+
+# open kitty
+cmd + shift - return : open -n /Applications/kitty.app

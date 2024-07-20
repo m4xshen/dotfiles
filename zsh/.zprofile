@@ -1,3 +1,1 @@
 source .zshrc
-
-starthypr

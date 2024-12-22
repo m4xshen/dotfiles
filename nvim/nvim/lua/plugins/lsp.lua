@@ -33,6 +33,7 @@ local languages = {
    "emmet_ls",
    "eslint",
    "pyright",
+   "astro",
 }
 
 return {
@@ -54,6 +55,9 @@ return {
                Lua = {
                   diagnostics = {
                      globals = { "vim", "describe", "it" },
+                  },
+                  hint = {
+                     enable = true,
                   },
                },
             },
@@ -79,12 +83,12 @@ return {
          )
 
          vim.lsp.handlers["textDocument/publishDiagnostics"] =
-             vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
-                virtual_text = false,
-             })
+            vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
+               virtual_text = false,
+            })
 
          local symbols =
-         { Error = "", Warn = "", Info = "", Hint = "" }
+            { Error = "", Warn = "", Info = "", Hint = "" }
          for name, icon in pairs(symbols) do
             local hl = "DiagnosticSign" .. name
             vim.fn.sign_define(hl, { text = icon, numhl = hl, texthl = hl })

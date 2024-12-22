@@ -14,6 +14,7 @@ return {
             javascriptreact = { "prettier" },
             typescript = { "prettier" },
             typescriptreact = { "prettier" },
+            cpp = { "clang-format" },
          },
          format_after_save = {
             lsp_format = "fallback",
@@ -80,13 +81,6 @@ return {
       "roobert/tailwindcss-colorizer-cmp.nvim",
    },
    {
-      "github/copilot.vim",
-      config = function()
-         vim.cmd('imap <silent><script><expr> <C-CR> copilot#Accept("\\<CR>")')
-         vim.g.copilot_no_tab_map = true
-      end,
-   },
-   {
       "shortcuts/no-neck-pain.nvim",
       version = "*",
       keys = {
@@ -97,5 +91,18 @@ return {
       "barrett-ruth/import-cost.nvim",
       build = "sh install.sh yarn",
       config = true,
+   },
+   {
+      "chipsenkbeil/distant.nvim",
+      branch = "v0.3",
+      config = function()
+         require("distant"):setup()
+      end,
+   },
+   {
+      "mcauley-penney/visual-whitespace.nvim",
+      opts = {
+         highlight = { link = "LineNr" },
+      },
    },
 }

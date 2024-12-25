@@ -20,6 +20,9 @@ return {
          },
          integrations = {
             notify = true,
+            mason = true,
+            fzf = true,
+            aerial = true,
          },
       },
       init = function()

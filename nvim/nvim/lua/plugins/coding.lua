@@ -14,6 +14,7 @@ return {
             javascriptreact = { "prettier" },
             typescript = { "prettier" },
             typescriptreact = { "prettier" },
+            astro = { "prettier" },
             cpp = { "clang-format" },
          },
          format_after_save = {
@@ -86,11 +87,6 @@ return {
       keys = {
          { "<Leader>n", ":NoNeckPain<CR>" },
       },
-   },
-   {
-      "barrett-ruth/import-cost.nvim",
-      build = "sh install.sh yarn",
-      config = true,
    },
    {
       "chipsenkbeil/distant.nvim",

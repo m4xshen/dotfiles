@@ -75,6 +75,13 @@ return {
             })
          end
 
+         local nvim_lsp = require("lspconfig")
+
+         nvim_lsp.denols.setup({
+            capabilities = capabilities,
+            root_dir = nvim_lsp.util.root_pattern("deno.json", "deno.jsonc"),
+         })
+
          vim.keymap.set(
             "n",
             "<Leader>e",
@@ -118,10 +125,12 @@ return {
             "html",
             "cssls",
             "ts_ls",
+            "denols",
             "emmet_ls",
             "eslint",
             "tailwindcss",
             "pyright",
+            "astro",
          },
       },
    },

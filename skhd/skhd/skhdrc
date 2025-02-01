@@ -26,8 +26,11 @@ shift + cmd - 7 : yabai -m window --space  7; yabai -m space --focus 7
 shift + cmd - 8 : yabai -m window --space  8; yabai -m space --focus 8
 shift + cmd - 9 : yabai -m window --space  9; yabai -m space --focus 9
 
-# float / unfloat window and center on screen
-cmd - v : yabai -m window --toggle float --grid 4:4:1:1:2:2
+# let yabai manage / unmanage window
+cmd - m : yabai -m window --toggle float
+
+# fullscreen window
+cmd - f : yabai -m query --windows --space | jq '.[].id' | xargs -I{} yabai -m window {} --toggle zoom-fullscreen
 
 # open kitty
 cmd + shift - return : open -n /Applications/kitty.app

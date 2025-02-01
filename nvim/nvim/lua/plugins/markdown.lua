@@ -5,13 +5,9 @@ return {
          vim.fn["mkdp#util#install"]()
       end,
    },
-   -- {
-   --    "MeanderingProgrammer/markdown.nvim",
-   --    main = "render-markdown",
-   --    opts = {},
-   --    dependencies = {
-   --       "nvim-treesitter/nvim-treesitter",
-   --       "nvim-tree/nvim-web-devicons",
-   --    },
-   -- },
+   {
+      "MeanderingProgrammer/render-markdown.nvim",
+      dependencies = { "nvim-treesitter/nvim-treesitter" },
+      opts = {},
+   },
 }

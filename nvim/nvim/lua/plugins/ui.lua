@@ -17,14 +17,14 @@ return {
          custom_highlights = function(colors)
             return {
                WinSeparator = {
-                  fg = colors.lavender,
+                  fg = colors.surface0,
                },
             }
          end,
          color_overrides = {
             mocha = {
-               base = "#11111b",
-               mantle = "#11111b",
+               base = "#000000",
+               mantle = "#000000",
             },
          },
          integrations = {

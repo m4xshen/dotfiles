@@ -1,10 +1,14 @@
-- OS: macOS Sonoma
+<h1 align="center">Verdant</h1>
+
+- OS: macOS Sequoia
 - WM: [yabai](https://github.com/koekeishiya/yabai)
+- Bar: [SketchyBar](https://felixkratz.github.io/SketchyBar/)
 - Terminal: [Kitty](https://sw.kovidgoyal.net/kitty/)
 - Shell: [Zsh](https://www.zsh.org/)
 - Editor: [Neovim](https://neovim.io/)
 - Font: [Fira Code](https://github.com/tonsky/FiraCode)
-- Colorscheme: [catppuccin mocha](https://github.com/catppuccin/catppuccin) with custom background (#11111B)
+- Colorscheme: [catppuccin mocha](https://github.com/catppuccin/catppuccin) with black background
+- Fetch: [Bunnyfetch](https://github.com/Rosettea/bunnyfetch)
 
 ## Requirement
 

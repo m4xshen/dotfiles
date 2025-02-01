@@ -1,7 +1,8 @@
 <h1 align="center">Verdant</h1>
 
-![Screenshot 2025-02-01 at 8 15 04 PM](https://github.com/user-attachments/assets/39e120bf-049d-4480-a475-a6b56eb7eeeb)
-![Screenshot 2025-02-01 at 8 14 39 PM](https://github.com/user-attachments/assets/2490c5f2-5d38-4a0c-9b0b-5f5f781a1e8f)
+![Screenshot1](https://github.com/user-attachments/assets/e9ba757a-e967-4a71-b439-7ed9f718f1b6)
+
+![Screenshot2](https://github.com/user-attachments/assets/0d3d3508-6da5-4acb-a121-0b1ed67a8cab)
 
 - OS: macOS Sequoia
 - WM: [yabai](https://github.com/koekeishiya/yabai)

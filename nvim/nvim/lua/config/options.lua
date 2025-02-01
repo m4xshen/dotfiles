@@ -36,15 +36,3 @@ vim.opt.termguicolors = true
 vim.opt.cmdheight = 0
 
 vim.opt.laststatus = 3
-
--- vim.opt.langmap = vim.fn.join({
---    "nN" .. ";" .. "jJ",
---    "eE" .. ";" .. "kK",
---    "iI" .. ";" .. "lL",
---    "kK" .. ";" .. "nN",
---    "uU" .. ";" .. "iI",
---    "lL" .. ";" .. "uU",
---    "fF" .. ";" .. "eE",
---    "tT" .. ";" .. "fF",
---    "jJ" .. ";" .. "tT",
--- }, ",")

@@ -1,13 +1,13 @@
 PLUGIN_DIR="$CONFIG_DIR/plugins"
 
-sketchybar --bar position=top height=45 color=0x00000000 y_offset=20 corner_radius=10
+sketchybar --bar position=top height=45 color=0x00000000 y_offset=16 corner_radius=10 padding_left=16 padding_right=16
 
 default=(
-  padding_left=10
-  padding_right=10
-  icon.font="FiraCode Nerd Font Mono:Bold:20.0"
-  label.font="FiraCode Nerd Font Mono:Bold:14.0"
-  icon.color=0xffffffff
+  padding_left=16
+  padding_right=16
+  icon.font="FiraCode Nerd Font Mono:Regular:20.0"
+  label.font="FiraCode Nerd Font Mono:Medium:14.0"
+  icon.color=0xffa6e3a1
   label.color=0xffffffff
   icon.padding_left=4
   icon.padding_right=4
@@ -17,7 +17,7 @@ default=(
 sketchybar --default "${default[@]}"
 
 sketchybar --add item logo left \
-           --set logo update_freq=10 icon="" icon.padding_right=15 icon.padding_left=15 background.color=0xff000000 background.height=45 background.corner_radius=10 label.drawing=off icon.font.size=24 padding_left=0 padding_right=10
+           --set logo update_freq=10 icon="" icon.padding_bottom=15 icon.padding_right=15 icon.padding_left=15 background.color=0xff000000 background.height=45 background.corner_radius=10 label.drawing=off icon.font.size=24 padding_left=0 padding_right=16
 
 # workspaces
 for sid in {1..9}; do
@@ -54,25 +54,34 @@ sketchybar --add bracket spaces '/space\..*/' \
                         background.height=45 \
                         background.corner_radius=10
 
-sketchybar --add item volume right \
-           --set volume script="$PLUGIN_DIR/volume.sh" padding_right=10 padding_left=2 \
-           --subscribe volume volume_change \
-           --add item battery right \
-           --set battery update_freq=120 script="$PLUGIN_DIR/battery.sh" padding_right=2 padding_left=10 icon.font.size=16 \
-           --subscribe battery system_woke power_source_change
-
-sketchybar --add bracket controls volume battery \
-           --set controls background.color=0xff000000 \
-                        background.height=45 \
-                        background.corner_radius=10
-
 sketchybar --add item clock right \
            --set clock update_freq=10 icon="󰥔" script="$PLUGIN_DIR/clock.sh" label.padding_right=10 icon.padding_left=10 icon.font.size=22
 
 sketchybar --add bracket clock \
            --set clock background.color=0xff000000 \
                         background.height=45 \
+                        background.corner_radius=10 \
+                        padding_right=0
+
+sketchybar --add item date right \
+           --set date update_freq=10 icon="" script="$PLUGIN_DIR/date.sh" label.padding_right=10 icon.padding_left=10 icon.font.size=22
+
+sketchybar --add bracket date \
+           --set date background.color=0xff000000 \
+                        background.height=45 \
+                        background.corner_radius=10 \
+                        padding_right=0
+
+sketchybar --add item battery right \
+           --set battery update_freq=120 script="$PLUGIN_DIR/battery.sh" padding_left=2 padding_right=10 icon.font.size=16 \
+           --subscribe battery system_woke power_source_change \
+           --add item volume right \
+           --set volume script="$PLUGIN_DIR/volume.sh" padding_left=10 padding_right=2 \
+           --subscribe volume volume_change
+
+sketchybar --add bracket controls volume battery \
+           --set controls background.color=0xff000000 \
+                        background.height=45 \
                         background.corner_radius=10
 
-##### Force all scripts to run the first time (never do this in a script) #####
 sketchybar --update

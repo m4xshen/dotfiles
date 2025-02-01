@@ -14,12 +14,4 @@ return {
          },
       },
    },
-   -- {
-   --    "folke/which-key.nvim",
-   --    opts = {},
-   -- },
-   -- {
-   --    "tris203/precognition.nvim",
-   --    opts = {},
-   -- },
 }

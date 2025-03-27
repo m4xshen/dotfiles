@@ -34,6 +34,7 @@ local languages = {
    "eslint",
    "pyright",
    "astro",
+   "solidity_ls_nomicfoundation",
 }
 
 return {
@@ -67,6 +68,16 @@ return {
             on_attach = function()
                require("tailwindcss-colors").buf_attach(0)
             end,
+         })
+
+         require("lspconfig").sourcekit.setup({
+            capabilities = {
+               workspace = {
+                  didChangeWatchedFiles = {
+                     dynamicRegistration = true,
+                  },
+               },
+            },
          })
 
          for _, language in pairs(languages) do
@@ -131,6 +142,7 @@ return {
             "tailwindcss",
             "pyright",
             "astro",
+            "solidity_ls_nomicfoundation",
          },
       },
    },

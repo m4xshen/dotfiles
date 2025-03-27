@@ -3,23 +3,23 @@ return {
    --    "lukas-reineke/virt-column.nvim",
    --    opts = {},
    -- },
-   -- {
-   --    "m4xshen/smartcolumn.nvim",
-   --    opts = {
-   --       disabled_filetypes = {
-   --          "netrw",
-   --          "NvimTree",
-   --          "Lazy",
-   --          "mason",
-   --          "help",
-   --          "text",
-   --          "markdown",
-   --          "tex",
-   --          "html",
-   --       },
-   --       scope = "window",
-   --    },
-   -- },
+   {
+      "m4xshen/smartcolumn.nvim",
+      opts = {
+         disabled_filetypes = {
+            "netrw",
+            "NvimTree",
+            "Lazy",
+            "mason",
+            "help",
+            "text",
+            "markdown",
+            "tex",
+            "html",
+         },
+         scope = "window",
+      },
+   },
    {
       "nvim-lualine/lualine.nvim",
       dependencies = { "nvim-tree/nvim-web-devicons" },

@@ -12,6 +12,12 @@ return {
                length = 3,
             },
          },
+         ui = {
+            size = {
+               width = "60%",
+               height = "60%",
+            },
+         },
       },
    },
 }

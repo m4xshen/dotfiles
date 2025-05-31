@@ -76,4 +76,16 @@ return {
          vim.keymap.set("n", "¬", require("smart-splits").resize_right)
       end,
    },
+   {
+      "mvllow/modes.nvim",
+      opts = {
+         colors = {
+            bg = "",
+            copy = "#f9e2af",
+            delete = "#f38ba8	",
+            insert = "#a6e3a1",
+            visual = "#cba6f7",
+         },
+      },
+   },
 }

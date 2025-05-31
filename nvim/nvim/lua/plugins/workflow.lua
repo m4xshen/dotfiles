@@ -2,8 +2,8 @@ return {
    {
       "m4xshen/hardtime.nvim",
       dependencies = { "MunifTanjim/nui.nvim" },
+      lazy = false,
       opts = {
-         allow_different_key = true,
          hints = {
             ["[dcyvV][ia][%(%)]"] = {
                message = function(keys)
@@ -14,10 +14,14 @@ return {
          },
          ui = {
             size = {
-               width = "60%",
-               height = "60%",
+               width = "80%",
+               height = "80%",
             },
          },
       },
    },
+   -- {
+   --    "folke/which-key.nvim",
+   --    event = "VeryLazy",
+   -- },
 }

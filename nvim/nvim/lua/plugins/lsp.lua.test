@@ -1,0 +1,8 @@
+vim.lsp.enable({ "lua", "python" })
+
+return {
+   {
+      "williamboman/mason.nvim",
+      opts = {},
+   },
+}

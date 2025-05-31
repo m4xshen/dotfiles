@@ -1,4 +1,3 @@
-vim.opt.mouse = "nvi"
 vim.opt.mousemoveevent = true
 
 vim.opt.number = true

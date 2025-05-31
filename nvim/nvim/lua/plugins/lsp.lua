@@ -70,15 +70,15 @@ return {
             end,
          })
 
-         require("lspconfig").sourcekit.setup({
-            capabilities = {
-               workspace = {
-                  didChangeWatchedFiles = {
-                     dynamicRegistration = true,
-                  },
-               },
-            },
-         })
+         -- require("lspconfig").sourcekit.setup({
+         --    capabilities = {
+         --       workspace = {
+         --          didChangeWatchedFiles = {
+         --             dynamicRegistration = true,
+         --          },
+         --       },
+         --    },
+         -- })
 
          for _, language in pairs(languages) do
             require("lspconfig")[language].setup({

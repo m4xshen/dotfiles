@@ -27,4 +27,3 @@ Install [stow](https://github.com/aspiers/stow)
 ## Star History
 
 [![Star History Chart](https://app.repohistory.com/api/svg?repo=m4xshen/dotfiles&type=Date&background=0D1117&color=FCE2C6)](https://app.repohistory.com/star-history)
-

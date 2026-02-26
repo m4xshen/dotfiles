@@ -1,0 +1,7 @@
+call plug#begin()
+
+Plug 'm4xshen/hardtime.nvim'
+
+call plug#end()
+
+lua require("hardtime").setup()

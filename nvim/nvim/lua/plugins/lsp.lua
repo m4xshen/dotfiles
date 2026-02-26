@@ -35,6 +35,7 @@ local languages = {
    "pyright",
    "astro",
    "solidity_ls_nomicfoundation",
+   "verible",
 }
 
 return {

@@ -4,6 +4,9 @@ return {
       dependencies = { "MunifTanjim/nui.nvim" },
       lazy = false,
       opts = {
+         restricted_keys = {
+            ["<BS>"] = { "", "i" },
+         },
          hints = {
             ["[dcyvV][ia][%(%)]"] = {
                message = function(keys)

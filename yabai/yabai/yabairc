@@ -2,19 +2,20 @@ yabai -m signal --add event=dock_did_restart action="sudo yabai --load-sa"
 sudo yabai --load-sa
 
 yabai -m config \
-        layout bsp \
-        mouse_follows_focus on \
-        focus_follows_mouse autoraise
+        layout bsp
 
 yabai -m config mouse_modifier cmd
 yabai -m config mouse_action1 move
 yabai -m config mouse_action2 resize
 
 # focus window after active space changes
-yabai -m signal --add event=space_changed action="yabai -m window --focus \$(yabai -m query --windows --space | jq .[0].id)"
+# yabai -m signal --add event=space_changed action="yabai -m window --focus \$(yabai -m query --windows --space | jq .[0].id)"
 
 # focus window after active display changes
-yabai -m signal --add event=display_changed action="yabai -m window --focus \$(yabai -m query --windows --space | jq .[0].id)"
+# yabai -m signal --add event=display_changed action="yabai -m window --focus \$(yabai -m query --windows --space | jq .[0].id)"
+
+# reload sketchybar when system woke
+yabai -m signal --add event=system_woke action="sh -c 'sleep 1; /opt/homebrew/bin/sketchybar --reload'"
 
 yabai -m config external_bar all:$(($(sketchybar --query bar | jq .height) + 0)):0
 
@@ -25,3 +26,7 @@ yabai -m config right_padding  16
 yabai -m config window_gap     16
 
 yabai -m config window_shadow off
+
+yabai -m rule --add title=".*Launcher.*" manage=off
+yabai -m rule --add title=".*Unreal.*" manage=off
+yabai -m rule --add title=".*Project.*" manage=off

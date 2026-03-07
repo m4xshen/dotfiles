@@ -6,4 +6,3 @@
 # stow -t ~/.config -S skhd
 # stow -t ~/.config -D sketchybar
 # stow -t ~ -D zsh
-# stow -t ~/Pictures -D wallpaper

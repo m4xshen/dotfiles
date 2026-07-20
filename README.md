@@ -23,7 +23,3 @@ Install [stow](https://github.com/aspiers/stow)
 
 1. Uncomment the config in `uninstall.sh` you want to uninstall
 2. Run `./uninstall.sh`
-
-## Star History
-
-[![Star History Chart](https://app.repohistory.com/api/svg?repo=m4xshen/dotfiles&type=Date&background=0D1117&color=FCE2C6)](https://app.repohistory.com/star-history)

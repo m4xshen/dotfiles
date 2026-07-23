@@ -63,3 +63,4 @@ eval "$(pyenv init - zsh)"
 
 export LUA_PATH='/usr/local/share/lua/5.1/?.lua;./?.lua;/opt/homebrew/share/luajit-2.1/?.lua;/usr/local/share/lua/5.1/?/init.lua;/opt/homebrew/share/lua/5.1/?.lua;/opt/homebrew/share/lua/5.1/?/init.lua;/Users/m4xshen/.luarocks/share/lua/5.1/?.lua;/Users/m4xshen/.luarocks/share/lua/5.1/?/init.lua'
 export LUA_CPATH='./?.so;/usr/local/lib/lua/5.1/?.so;/opt/homebrew/lib/lua/5.1/?.so;/usr/local/lib/lua/5.1/loadall.so;/Users/m4xshen/.luarocks/lib/lua/5.1/?.so'
+export PATH="$HOME/.diversion/bin:$PATH"

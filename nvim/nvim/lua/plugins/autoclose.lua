@@ -15,7 +15,7 @@ return {
                disabled_filetypes = { "markdown" },
             },
             ["`"] = { escape = false, close = true, pair = "``" },
-            [">"] = { escape = false, close = false, pair = "><" },
+            [">"] = { escape = false },
          },
       },
    },

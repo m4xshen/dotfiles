@@ -39,3 +39,10 @@ map({ "n" }, "<Leader>Y", '"+y$', {})
 
 map({ "n", "v" }, "<Leader>p", '"+p', {})
 map({ "n", "v" }, "<Leader>P", '"+P', {})
+
+-- vim.keymap.set("n", "J", function()
+--    vim.notify("Normal!")
+-- end)
+-- vim.keymap.set("v", "J", function()
+--    vim.notify("Visual!")
+-- end)

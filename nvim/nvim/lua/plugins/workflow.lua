@@ -1,12 +1,17 @@
 return {
    {
       "m4xshen/hardtime.nvim",
+      enabled = false,
       dependencies = { "MunifTanjim/nui.nvim" },
       lazy = false,
       opts = {
          restricted_keys = {
             ["<BS>"] = { "", "i" },
+            -- ["J"] = { "n", "v" },
          },
+         -- resetting_keys = {
+         --    ["J"] = {},
+         -- },
          hints = {
             ["[dcyvV][ia][%(%)]"] = {
                message = function(keys)

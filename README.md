@@ -19,6 +19,20 @@ Install [stow](https://github.com/aspiers/stow)
 1. Uncomment the config in `install.sh` you want to install
 2. Run `./install.sh`
 
+## nix-darwin
+
+After installing Nix and cloning this repository, bootstrap nix-darwin with:
+
+```sh
+sudo nix run nix-darwin/nix-darwin-26.05#darwin-rebuild -- switch --flake .#m3air
+```
+
+For subsequent rebuilds, run:
+
+```sh
+sudo darwin-rebuild switch --flake .#m3air
+```
+
 ## Uninstall
 
 1. Uncomment the config in `uninstall.sh` you want to uninstall

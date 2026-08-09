@@ -2,7 +2,7 @@
 ![Screenshot 2](https://github.com/user-attachments/assets/9980ec84-fc7e-444e-adf1-0b972fd13a3f)
 
 - OS: macOS Sequoia
-- WM: [yabai](https://github.com/koekeishiya/yabai)
+- WM: [AeroSpace](https://github.com/nikitabobko/AeroSpace)
 - Bar: [SketchyBar](https://felixkratz.github.io/SketchyBar/)
 - Terminal: [Kitty](https://sw.kovidgoyal.net/kitty/)
 - Shell: [Zsh](https://www.zsh.org/)
@@ -10,9 +10,10 @@
 - Font: [Fira Code](https://github.com/tonsky/FiraCode)
 - Colorscheme: [catppuccin mocha](https://github.com/catppuccin/catppuccin) with black bg
 
-## Requirement
+## Requirements
 
-Install [stow](https://github.com/aspiers/stow)
+- [Nix](https://nixos.org/download/) with flakes enabled
+- [GNU Stow](https://www.gnu.org/software/stow/)
 
 ## Installation
 

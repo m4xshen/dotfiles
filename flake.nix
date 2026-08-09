@@ -15,6 +15,7 @@
       # $ nix-env -qaP | grep wget
       environment.systemPackages = [
         nixpkgs-neovim.legacyPackages.${pkgs.stdenv.hostPlatform.system}.neovim
+        pkgs.kitty
         pkgs.vim
       ];
 
@@ -71,7 +72,7 @@
 
             "cmd-m" = "layout floating tiling";
             "cmd-f" = "fullscreen";
-            "cmd-shift-enter" = "exec-and-forget open -n /Applications/kitty.app";
+            "cmd-shift-enter" = "exec-and-forget open -n '/Applications/Nix Apps/kitty.app'";
           };
         };
       };

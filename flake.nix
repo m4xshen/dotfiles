@@ -34,11 +34,11 @@
             outer.right = 16;
           };
 
-          after-startup-command = [ "exec-and-forget sketchybar --reload" ];
+          after-startup-command = [ "exec-and-forget ${pkgs.sketchybar}/bin/sketchybar --reload" ];
           exec-on-workspace-change = [
             "/bin/bash"
             "-c"
-            "sketchybar --trigger aerospace_workspace_change FOCUSED_WORKSPACE=$AEROSPACE_FOCUSED_WORKSPACE"
+            "${pkgs.sketchybar}/bin/sketchybar --trigger aerospace_workspace_change FOCUSED_WORKSPACE=$AEROSPACE_FOCUSED_WORKSPACE"
           ];
 
           mode.main.binding = {
@@ -76,6 +76,8 @@
           };
         };
       };
+
+      services.sketchybar.enable = true;
 
       # Necessary for using flakes on this system.
       nix.settings.experimental-features = "nix-command flakes";

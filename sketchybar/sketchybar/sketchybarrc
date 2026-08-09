@@ -20,6 +20,8 @@ sketchybar --add item logo left \
            --set logo update_freq=10 icon="" icon.padding_bottom=15 icon.padding_right=15 icon.padding_left=15 background.color=0xff000000 background.height=45 background.corner_radius=10 label.drawing=off icon.font.size=24 padding_left=0 padding_right=16
 
 # workspaces
+sketchybar --add event aerospace_workspace_change
+
 for sid in {1..9}; do
   # Default padding
   padding_left=5
@@ -33,11 +35,10 @@ for sid in {1..9}; do
   fi
 
   space=(
-    space="$sid"
-    icon=""
+    icon=""
     label.drawing=off
-    script="$PLUGIN_DIR/space.sh"
-    click_script="yabai -m space --focus $sid"
+    script="$PLUGIN_DIR/space.sh $sid"
+    click_script="aerospace workspace $sid"
     
     # Initial state
     associated_display=active
@@ -45,8 +46,9 @@ for sid in {1..9}; do
     background.padding_left="$padding_left"
     background.padding_right="$padding_right"
   )
-  sketchybar --add space space."$sid" left \
-             --set space."$sid" "${space[@]}"
+  sketchybar --add item space."$sid" left \
+             --set space."$sid" "${space[@]}" \
+             --subscribe space."$sid" aerospace_workspace_change
 done
 
 sketchybar --add bracket spaces '/space\..*/' \
@@ -85,3 +87,8 @@ sketchybar --add bracket controls volume battery \
                         background.corner_radius=10
 
 sketchybar --update
+
+focused_workspace="$(aerospace list-workspaces --focused 2>/dev/null)"
+if [ -n "$focused_workspace" ]; then
+  sketchybar --trigger aerospace_workspace_change FOCUSED_WORKSPACE="$focused_workspace"
+fi

@@ -54,11 +54,21 @@ macos_name() {
   esac
 }
 
+wm_name() {
+  if pgrep -x AeroSpace > /dev/null 2>&1 || pgrep -x aerospace > /dev/null 2>&1; then
+    echo aerospace
+  elif pgrep -x yabai > /dev/null 2>&1; then
+    echo yabai
+  else
+    echo unknown
+  fi
+}
+
 cat <<EOF
 
 ${c0}   ${nc}            $(tput bold)${USER}$(tput sgr0)${white}@${reset}${hn}$(tput bold)$(hostname)${reset} 
 ${c0}  ${nc}${reset}
-${c0}    ${white}           ${red}$(tput bold)wm    ${ic}$(pgrep -x yabai > /dev/null 2>&1 && echo yabai || echo unknown)${reset}  
+${c0}    ${white}           ${red}$(tput bold)wm    ${ic}$(wm_name)${reset}
 ${c0}   ${white}(\ /)    ${blue}   $(tput bold)os    ${ic}macos $(macos_name)${reset}
 ${c0}   ${white}( . .)    ${green}  $(tput bold)up    ${ic}$(uptime_fmt)${reset}
 ${c0}   ${white}c(${red}"${white})(${red}"${white})${yellow}     $(tput bold)sh    ${ic}$(echo $SHELL | rev | cut -d'/' -f1 | rev)${reset}

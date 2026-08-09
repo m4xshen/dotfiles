@@ -5,16 +5,18 @@
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-26.05-darwin";
     nix-darwin.url = "github:nix-darwin/nix-darwin/nix-darwin-26.05";
     nix-darwin.inputs.nixpkgs.follows = "nixpkgs";
+    nixpkgs-neovim.url = "github:NixOS/nixpkgs/a421ac6595024edcfbb1ef950a3712b89161c359";
   };
 
-  outputs = inputs@{ self, nix-darwin, nixpkgs }:
+  outputs = inputs@{ self, nix-darwin, nixpkgs, nixpkgs-neovim }:
   let
     configuration = { pkgs, ... }: {
       # List packages installed in system profile. To search by name, run:
       # $ nix-env -qaP | grep wget
-      environment.systemPackages =
-        [ pkgs.vim
-        ];
+      environment.systemPackages = [
+        nixpkgs-neovim.legacyPackages.${pkgs.stdenv.hostPlatform.system}.neovim
+        pkgs.vim
+      ];
 
       # Necessary for using flakes on this system.
       nix.settings.experimental-features = "nix-command flakes";

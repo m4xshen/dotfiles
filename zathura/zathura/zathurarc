@@ -1,3 +1,0 @@
-set font "Fira Code 15"
-include catppuccin-mocha
-set selection-clipboard clipboard

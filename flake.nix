@@ -104,7 +104,7 @@
       home-manager = {
         useGlobalPkgs = true;
         useUserPackages = true;
-        users.m4xshen = {
+        users.m4xshen = { config, ... }: {
           imports = [
             ./kitty
             ./zsh
@@ -113,6 +113,8 @@
           home.stateVersion = "26.05";
 
           xdg.enable = true;
+          xdg.configFile."nvim".source =
+            config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/dotfiles/nvim";
         };
       };
 

@@ -12,11 +12,11 @@
 
 ## Requirements
 
-- [Nix](https://nixos.org/download/) with flakes enabled
+- [Lix](https://lix.systems/install/) with flakes enabled
 
 ## nix-darwin
 
-After installing Nix and cloning this repository, bootstrap nix-darwin with:
+After installing Lix and cloning this repository, bootstrap nix-darwin with:
 
 ```sh
 sudo nix run nix-darwin/nix-darwin-26.05#darwin-rebuild -- switch --flake .#m3air

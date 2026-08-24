@@ -87,8 +87,8 @@
         '';
       };
 
-      # Necessary for using flakes on this system.
-      nix.settings.experimental-features = "nix-command flakes";
+      # The official Lix installer manages Lix and its daemon.
+      nix.enable = false;
 
       # Enable shell support in nix-darwin.
       programs.zsh.enable = true;

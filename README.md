@@ -13,12 +13,6 @@
 ## Requirements
 
 - [Nix](https://nixos.org/download/) with flakes enabled
-- [GNU Stow](https://www.gnu.org/software/stow/)
-
-## Installation
-
-1. Uncomment the config in `install.sh` you want to install
-2. Run `./install.sh`
 
 ## nix-darwin
 
@@ -33,8 +27,3 @@ For subsequent rebuilds, run:
 ```sh
 sudo darwin-rebuild switch --flake .#m3air
 ```
-
-## Uninstall
-
-1. Uncomment the config in `uninstall.sh` you want to uninstall
-2. Run `./uninstall.sh`

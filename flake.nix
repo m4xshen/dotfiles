@@ -5,10 +5,12 @@
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-26.05-darwin";
     nix-darwin.url = "github:nix-darwin/nix-darwin/nix-darwin-26.05";
     nix-darwin.inputs.nixpkgs.follows = "nixpkgs";
+    home-manager.url = "github:nix-community/home-manager/release-26.05";
+    home-manager.inputs.nixpkgs.follows = "nixpkgs";
     nixpkgs-neovim.url = "github:NixOS/nixpkgs/a421ac6595024edcfbb1ef950a3712b89161c359";
   };
 
-  outputs = inputs@{ self, nix-darwin, nixpkgs, nixpkgs-neovim }:
+  outputs = inputs@{ self, nix-darwin, home-manager, nixpkgs, nixpkgs-neovim }:
   let
     configuration = { pkgs, ... }: {
       # List packages installed in system profile. To search by name, run:
@@ -96,6 +98,19 @@
 
       # User that receives per-user nix-darwin services and settings.
       system.primaryUser = "m4xshen";
+      users.users.m4xshen.home = "/Users/m4xshen";
+
+      home-manager = {
+        useGlobalPkgs = true;
+        useUserPackages = true;
+        users.m4xshen = {
+          imports = [ ./kitty ];
+
+          home.stateVersion = "26.05";
+
+          xdg.enable = true;
+        };
+      };
 
       # Used for backwards compatibility, please read the changelog before changing.
       # $ darwin-rebuild changelog
@@ -109,7 +124,10 @@
     # Build darwin flake using:
     # $ darwin-rebuild build --flake .#m3air
     darwinConfigurations."m3air" = nix-darwin.lib.darwinSystem {
-      modules = [ configuration ];
+      modules = [
+        configuration
+        home-manager.darwinModules.home-manager
+      ];
     };
   };
 }

@@ -19,14 +19,6 @@
         nixpkgs-neovim.legacyPackages.${pkgs.stdenv.hostPlatform.system}.neovim
       ];
 
-      services.sketchybar = {
-        enable = true;
-        config = ''
-          CONFIG_DIR="${./sketchybar}"
-          ${builtins.readFile ./sketchybar/sketchybarrc}
-        '';
-      };
-
       # The official Lix installer manages Lix and its daemon.
       nix.enable = false;
 
@@ -48,6 +40,7 @@
           imports = [
             ./aerospace
             ./kitty
+            ./sketchybar
             ./zsh
           ];
 

@@ -43,6 +43,16 @@
 
             fonts.packages = [ pkgs.nerd-fonts.fira-code ];
 
+            homebrew = {
+              enable = true;
+              casks = [
+                "google-chrome"
+                "raycast"
+                "spotify"
+                "zen"
+              ];
+            };
+
             home-manager = {
               useGlobalPkgs = true;
               useUserPackages = true;

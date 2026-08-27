@@ -65,7 +65,10 @@
         "cmd-shift-9" = [ "move-node-to-workspace 9" "workspace 9" ];
 
         "cmd-m" = "layout floating tiling";
-        "cmd-f" = "fullscreen";
+        "cmd-f" = [
+          "fullscreen --no-outer-gaps"
+          "exec-and-forget ${pkgs.sketchybar}/bin/sketchybar --bar hidden=current"
+        ];
         "cmd-shift-enter" = "exec-and-forget open -n '${config.home.homeDirectory}/Applications/Home Manager Apps/kitty.app'";
       };
     };

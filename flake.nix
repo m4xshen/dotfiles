@@ -27,7 +27,7 @@
       nix-darwin.lib.darwinSystem {
         modules = [
           home-manager.darwinModules.home-manager
-          {
+          ({ pkgs, ... }: {
             # The official Lix installer manages Lix and its daemon.
             nix.enable = false;
 
@@ -41,6 +41,8 @@
             system.defaults.NSGlobalDomain._HIHideMenuBar = true;
             system.defaults.dock.autohide = true;
 
+            fonts.packages = [ pkgs.nerd-fonts.fira-code ];
+
             home-manager = {
               useGlobalPkgs = true;
               useUserPackages = true;
@@ -52,7 +54,7 @@
             system.stateVersion = 6;
 
             nixpkgs.hostPlatform = system;
-          }
+          })
         ] ++ extraModules;
       };
   in

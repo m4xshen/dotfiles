@@ -19,11 +19,11 @@
 After installing Lix and cloning this repository, bootstrap nix-darwin with:
 
 ```sh
-sudo nix run nix-darwin/nix-darwin-26.05#darwin-rebuild -- switch --flake .#m3air
+sudo nix run nix-darwin/nix-darwin-26.05#darwin-rebuild -- switch --flake .#mac
 ```
 
 For subsequent rebuilds, run:
 
 ```sh
-sudo darwin-rebuild switch --flake .#m3air
+sudo darwin-rebuild switch --flake .#mac
 ```

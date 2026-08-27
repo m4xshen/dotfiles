@@ -52,8 +52,8 @@
   in
   {
     # Build darwin flake using:
-    # $ darwin-rebuild build --flake .#m3air
-    darwinConfigurations."m3air" = nix-darwin.lib.darwinSystem {
+    # $ darwin-rebuild build --flake .#mac
+    darwinConfigurations."mac" = nix-darwin.lib.darwinSystem {
       modules = [
         configuration
         home-manager.darwinModules.home-manager

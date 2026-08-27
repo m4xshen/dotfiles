@@ -38,6 +38,9 @@
             system.primaryUser = username;
             users.users.${username}.home = "/Users/${username}";
 
+            system.defaults.NSGlobalDomain._HIHideMenuBar = true;
+            system.defaults.dock.autohide = true;
+
             home-manager = {
               useGlobalPkgs = true;
               useUserPackages = true;

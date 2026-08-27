@@ -1,6 +1,7 @@
 {
   imports = [
     ../aerospace
+    ../keyboard
     ../kitty
     ../neovim
     ../sketchybar

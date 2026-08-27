@@ -14,6 +14,16 @@
 
 - [Lix](https://lix.systems/install/) with flakes enabled
 
+## Configuration
+
+Machine-specific values live in `hosts.nix`. Before the first rebuild, set
+`username` for the `mac` configuration to your macOS account name. Add another
+entry when managing another Mac; each entry becomes a `darwinConfigurations`
+output with the same name.
+
+The shared Home Manager configuration is exported as
+`homeManagerModules.default` and can also be imported by another flake.
+
 ## nix-darwin
 
 After installing Lix and cloning this repository, bootstrap nix-darwin with:

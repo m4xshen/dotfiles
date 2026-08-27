@@ -62,7 +62,7 @@
     '';
 
     profileExtra = ''
-      ${config.home.homeDirectory}/dotfiles/bunnyfetch
+      "${../bunnyfetch}"
     '';
   };
 

@@ -1,5 +1,4 @@
 {
-  config,
   nixpkgs-neovim,
   pkgs,
   ...
@@ -17,6 +16,5 @@
     sideloadInitLua = true;
   };
 
-  xdg.configFile."nvim".source =
-    config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/dotfiles/nvim";
+  xdg.configFile."nvim".source = ../nvim;
 }

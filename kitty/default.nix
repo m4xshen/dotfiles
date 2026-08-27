@@ -2,9 +2,6 @@
   programs.kitty = {
     enable = true;
 
-    # Kitty itself remains installed by nix-darwin.
-    package = null;
-
     # Preserve Kitty's native shell integration behavior instead of having
     # Home Manager source it from the managed shell configuration.
     shellIntegration.mode = null;

@@ -12,13 +12,7 @@
 
   outputs = inputs@{ self, nix-darwin, home-manager, nixpkgs, nixpkgs-neovim }:
   let
-    configuration = { pkgs, ... }: {
-      # List packages installed in system profile. To search by name, run:
-      # $ nix-env -qaP | grep wget
-      environment.systemPackages = [
-        nixpkgs-neovim.legacyPackages.${pkgs.stdenv.hostPlatform.system}.neovim
-      ];
-
+    configuration = { ... }: {
       # The official Lix installer manages Lix and its daemon.
       nix.enable = false;
 
@@ -36,10 +30,12 @@
       home-manager = {
         useGlobalPkgs = true;
         useUserPackages = true;
-        users.m4xshen = { config, ... }: {
+        extraSpecialArgs = { inherit nixpkgs-neovim; };
+        users.m4xshen = {
           imports = [
             ./aerospace
             ./kitty
+            ./neovim
             ./sketchybar
             ./zsh
           ];
@@ -47,8 +43,6 @@
           home.stateVersion = "26.05";
 
           xdg.enable = true;
-          xdg.configFile."nvim".source =
-            config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/dotfiles/nvim";
         };
       };
 

@@ -16,10 +16,6 @@
       # The official Lix installer manages Lix and its daemon.
       nix.enable = false;
 
-      # Enable shell support in nix-darwin.
-      programs.zsh.enable = true;
-      # programs.fish.enable = true;
-
       # Set Git commit hash for darwin-version.
       system.configurationRevision = self.rev or self.dirtyRev or null;
 

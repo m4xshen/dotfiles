@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ config, pkgs, ... }:
 
 {
   programs.aerospace = {
@@ -66,7 +66,7 @@
 
         "cmd-m" = "layout floating tiling";
         "cmd-f" = "fullscreen";
-        "cmd-shift-enter" = "exec-and-forget open -n '/Users/m4xshen/Applications/Home Manager Apps/kitty.app'";
+        "cmd-shift-enter" = "exec-and-forget open -n '${config.home.homeDirectory}/Applications/Home Manager Apps/kitty.app'";
       };
     };
   };

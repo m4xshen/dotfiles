@@ -1,3 +1,5 @@
+{ pkgs, ... }:
+
 {
   imports = [
     ../aerospace
@@ -7,6 +9,8 @@
     ../sketchybar
     ../zsh
   ];
+
+  home.packages = [ pkgs.gh ];
 
   home.stateVersion = "26.05";
 

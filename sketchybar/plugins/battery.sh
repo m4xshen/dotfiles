@@ -4,8 +4,15 @@ PERCENTAGE="$(pmset -g batt | grep -Eo "\d+%" | cut -d% -f1)"
 CHARGING="$(pmset -g batt | grep 'AC Power')"
 
 if [ "$PERCENTAGE" = "" ]; then
+  # No battery present (e.g. Mac mini): hide the item and let volume take
+  # over the bracket's left edge padding so it stays symmetric.
+  sketchybar --set "$NAME" drawing=off
+  sketchybar --set volume padding_left=2
   exit 0
 fi
+
+sketchybar --set "$NAME" drawing=on
+sketchybar --set volume padding_left=10
 
 # Icons to use for battery levels
 ICONS=("󰁺" "󰁻" "󰁼" "󰁽" "󰁾" "󰁿" "󰁿" "󰂀" "󰂁" "󰂂" "󰁹")

@@ -22,7 +22,7 @@
         inner.vertical = 16;
         outer.left = 16;
         outer.bottom = 16;
-        outer.top = 45;
+        outer.top = 45 + 32;
         outer.right = 16;
       };
 

@@ -5,6 +5,8 @@
 }:
 
 {
+  home.packages = [ pkgs.fd ];
+
   programs.neovim = {
     enable = true;
     package = nixpkgs-neovim.legacyPackages.${pkgs.stdenv.hostPlatform.system}.neovim-unwrapped;

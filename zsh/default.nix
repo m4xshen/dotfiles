@@ -53,9 +53,9 @@
       fpath=("$HOME/completion_zsh" $fpath)
       PROMPT='%F{base}%n%f=>%F{blue}%~%f | '
 
-      export NVM_DIR="$HOME/.nvm"
-      [[ -s "$NVM_DIR/nvm.sh" ]] && source "$NVM_DIR/nvm.sh"
-      [[ -s "$NVM_DIR/bash_completion" ]] && source "$NVM_DIR/bash_completion"
+      export NVM_DIR="$HOME/.config/nvm"
+      [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+      [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
       [[ -f "$HOME/.deno/env" ]] && source "$HOME/.deno/env"
       [[ -f "$HOME/.local/bin/env" ]] && source "$HOME/.local/bin/env"
@@ -67,6 +67,11 @@
   };
 
   programs.zoxide = {
+    enable = true;
+    enableZshIntegration = true;
+  };
+
+  programs.fzf = {
     enable = true;
     enableZshIntegration = true;
   };

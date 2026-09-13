@@ -37,3 +37,7 @@ For subsequent rebuilds, run:
 ```sh
 sudo darwin-rebuild switch --flake .#mac
 ```
+
+## Star History
+
+[![Star History Chart](https://app.repohistory.com/api/svg?repo=m4xshen/dotfiles&type=Date&background=0D1117&color=FCE2C6)](https://app.repohistory.com/star-history)

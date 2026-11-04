@@ -26,6 +26,9 @@ map("n", "<C-d>", "<C-d>zz", {})
 map("n", "<C-b>", "<C-b>zz", {})
 map("n", "<C-f>", "<C-f>zz", {})
 
+-- cycle through windows
+map("n", "<Tab>", "<C-w>w", {})
+
 -- leader movements
 map("n", "<Leader>w", ":write<CR>", {})
 map("n", "<Leader>s", ":source %<CR>", {})

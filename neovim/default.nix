@@ -5,7 +5,10 @@
 }:
 
 {
-  home.packages = [ pkgs.fd ];
+  home.packages = [
+    pkgs.fd
+    pkgs.ripgrep
+  ];
 
   programs.neovim = {
     enable = true;

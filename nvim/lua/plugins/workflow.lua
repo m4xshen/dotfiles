@@ -1,7 +1,7 @@
 return {
    {
       "m4xshen/hardtime.nvim",
-      enabled = false,
+      -- enabled = false,
       dependencies = { "MunifTanjim/nui.nvim" },
       lazy = false,
       opts = {
@@ -28,8 +28,8 @@ return {
          },
       },
    },
-   -- {
-   --    "folke/which-key.nvim",
-   --    event = "VeryLazy",
-   -- },
+   {
+      "folke/which-key.nvim",
+      event = "VeryLazy",
+   },
 }

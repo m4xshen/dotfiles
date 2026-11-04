@@ -21,7 +21,10 @@
       tab_bar_margin_height = "0.0 4.0";
       tab_bar_style = "slant";
       tab_bar_min_tabs = 2;
-      tab_title_template = ''"{activity_symbol} {index} {tab.active_exe}"'';
+      tab_title_template = ''"{bell_symbol}{activity_symbol} {index} {tab.active_exe}"'';
+      # Mark a tab whose unfocused window rang the bell until it is visited.
+      bell_on_tab = ''"● "'';
+      enable_audio_bell = "no";
 
       # Basic colors
       foreground = "#CDD6F4";
@@ -44,6 +47,9 @@
       # OS window titlebar colors
       wayland_titlebar_color = "system";
       macos_titlebar_color = "system";
+
+      # Send Option as Alt so apps (e.g. herdr alt+1..9) receive alt chords.
+      macos_option_as_alt = "yes";
 
       # Tab bar colors
       active_tab_foreground = "#CDD6F4";
@@ -77,14 +83,6 @@
       color14 = "#94E2D5";
       color7 = "#BAC2DE";
       color15 = "#A6ADC8";
-    };
-
-    keybindings = {
-      "alt+1" = "goto_tab 1";
-      "alt+2" = "goto_tab 2";
-      "alt+3" = "goto_tab 3";
-      "alt+4" = "goto_tab 4";
-      "alt+5" = "goto_tab 5";
     };
 
     # These directives occur more than once, so they cannot be represented by

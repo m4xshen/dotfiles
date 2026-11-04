@@ -18,5 +18,6 @@ in
     };
 
     ui.toast.delivery = "system";
+    ui.toast.clipboard.enabled = false;
   };
 }

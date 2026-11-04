@@ -8,13 +8,14 @@
     home-manager.url = "github:nix-community/home-manager/release-26.05";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
     nixpkgs-neovim.url = "github:NixOS/nixpkgs/a421ac6595024edcfbb1ef950a3712b89161c359";
+    nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
   };
 
-  outputs = { self, nix-darwin, home-manager, nixpkgs, nixpkgs-neovim }:
+  outputs = { self, nix-darwin, home-manager, nixpkgs, nixpkgs-neovim, nixpkgs-unstable }:
   let
     homeModule = {
       imports = [ ./home ];
-      _module.args = { inherit nixpkgs-neovim; };
+      _module.args = { inherit nixpkgs-neovim nixpkgs-unstable; };
     };
     hosts = import ./hosts.nix;
 

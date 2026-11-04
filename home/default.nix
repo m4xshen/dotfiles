@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, nixpkgs-unstable, ... }:
 
 {
   imports = [
@@ -10,7 +10,10 @@
     ../zsh
   ];
 
-  home.packages = [ pkgs.gh ];
+  home.packages = [
+    pkgs.gh
+    nixpkgs-unstable.legacyPackages.${pkgs.stdenv.hostPlatform.system}.herdr
+  ];
 
   home.stateVersion = "26.05";
 

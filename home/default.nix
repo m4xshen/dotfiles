@@ -1,8 +1,9 @@
-{ pkgs, nixpkgs-unstable, ... }:
+{ pkgs, ... }:
 
 {
   imports = [
     ../aerospace
+    ../herdr
     ../keyboard
     ../kitty
     ../neovim
@@ -12,7 +13,6 @@
 
   home.packages = [
     pkgs.gh
-    nixpkgs-unstable.legacyPackages.${pkgs.stdenv.hostPlatform.system}.herdr
     pkgs.terminal-notifier
   ];
 

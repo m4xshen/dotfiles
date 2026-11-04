@@ -36,6 +36,7 @@ local languages = {
    "astro",
    "solidity_ls_nomicfoundation",
    "verible",
+   "kotlin_lsp",
 }
 
 return {
@@ -81,6 +82,25 @@ return {
          --    },
          -- })
 
+         -- TODO: Remove this once the pinned nvim-lspconfig includes kotlin_lsp.
+         local configs = require("lspconfig.configs")
+         if not configs.kotlin_lsp then
+            configs.kotlin_lsp = {
+               default_config = {
+                  cmd = { "intellij-server", "--stdio" },
+                  filetypes = { "kotlin" },
+                  root_dir = require("lspconfig.util").root_pattern(
+                     "settings.gradle",
+                     "settings.gradle.kts",
+                     "pom.xml",
+                     "build.gradle",
+                     "build.gradle.kts",
+                     "workspace.json"
+                  ),
+               },
+            }
+         end
+
          for _, language in pairs(languages) do
             require("lspconfig")[language].setup({
                capabilities = capabilities,
@@ -102,12 +122,12 @@ return {
          )
 
          vim.lsp.handlers["textDocument/publishDiagnostics"] =
-            vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
-               virtual_text = false,
-            })
+             vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
+                virtual_text = false,
+             })
 
          local symbols =
-            { Error = "", Warn = "", Info = "", Hint = "" }
+         { Error = "", Warn = "", Info = "", Hint = "" }
          for name, icon in pairs(symbols) do
             local hl = "DiagnosticSign" .. name
             vim.fn.sign_define(hl, { text = icon, numhl = hl, texthl = hl })

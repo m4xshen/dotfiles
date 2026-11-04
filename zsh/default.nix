@@ -3,8 +3,6 @@
 {
   home.sessionVariables = {
     EDITOR = "nvim";
-    JAVA_HOME = "/Library/Java/JavaVirtualMachines/zulu-17.jdk/Contents/Home";
-    ANDROID_HOME = "$HOME/Library/Android/sdk";
     LUA_PATH = "/usr/local/share/lua/5.1/?.lua;./?.lua;/opt/homebrew/share/luajit-2.1/?.lua;/usr/local/share/lua/5.1/?/init.lua;/opt/homebrew/share/lua/5.1/?.lua;/opt/homebrew/share/lua/5.1/?/init.lua;$HOME/.luarocks/share/lua/5.1/?.lua;$HOME/.luarocks/share/lua/5.1/?/init.lua";
     LUA_CPATH = "./?.so;/usr/local/lib/lua/5.1/?.so;/opt/homebrew/lib/lua/5.1/?.so;/usr/local/lib/lua/5.1/loadall.so;$HOME/.luarocks/lib/lua/5.1/?.so";
   };
@@ -52,6 +50,10 @@
     initContent = ''
       fpath=("$HOME/completion_zsh" $fpath)
       PROMPT='%F{base}%n%f=>%F{blue}%~%f | '
+
+      export JAVA_HOME=$(/usr/libexec/java_home -v 17)
+      export ANDROID_HOME="$HOME/Library/Android/sdk"
+      export PATH="$ANDROID_HOME/platform-tools:$ANDROID_HOME/emulator:$JAVA_HOME/bin:$PATH"
 
       export NVM_DIR="$HOME/.config/nvm"
       [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
